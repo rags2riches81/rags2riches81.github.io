@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html><!-- todo: get pictures from Deirdre to intersperse through skywatchers text. --><head>
+<meta charset="utf-8">
+
+<title>Skywatchers | ABD Productions</title>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+  rel="stylesheet">
+
+
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet">
+<link rel="stylesheet" href="node_modules/custom/css/ideal-image-slider.css">
+<link rel="stylesheet" href="node_modules/custom/css/iis-thumb-nav.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/themes/default/default.css">
+<link
+  href="node_modules/custom/css/theme.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+<link
+  href="node_modules/custom/css/custom.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+
+<link
+  href="node_modules/custom/css/hnav.css"
+  rel="stylesheet"
+  type="text/css">
+<style>#slider {
+		max-width: 40rem;
+		margin: 50px auto;
+	}</style>
+
+<!--link
+  href="node_modules/custom/css/photo.css"
+  rel="stylesheet"
+  type="text/css"-->
+
+
+<style>
+	.fulltext p,
+.less {
+	display: none;
+}
+
+.fulltext:target p,
+.fulltext:target .less {
+	display: block;
+}
+
+.fulltext:target .more {
+	display: none;
+}
+</style>
+
+
+<!--
+  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
+  web page. We recommend that you do not modify it.
+-->
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+
+<script
+  src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3:default.js"
+  type="text/javascript">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+if ('querySelector' in document &&
+	'addEventListener' in window) {
+
+	var toggleButtons = document.querySelectorAll('.toggle-content');
+	var fullTextWrappers = document.querySelectorAll('.fulltext');
+	var fullText;
+	var toggleButtonText;
+
+
+	[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+		// hide all full text on load
+		fullTextWrapper.setAttribute('hidden', true);
+	});
+
+	[].forEach.call(toggleButtons, function(toggleButton) {
+		// show toggle more buttons
+		toggleButton.removeAttribute('hidden');
+
+		// add listener for each button
+		toggleButton.addEventListener('click', function () {
+
+			fullTextWrapper = this.parentElement.querySelector('.fulltext');
+			toggleButtonText = this.querySelector('.text');
+
+			// change attributes and text if full text is shown/hidden
+			if (!fullTextWrapper.hasAttribute('hidden')) {
+				toggleButtonText.innerText = 'Show More';
+				fullTextWrapper.setAttribute('hidden', true);
+				toggleButton.setAttribute('aria-expanded', false);
+			} else {
+				toggleButtonText.innerText = 'Show Less';
+				fullTextWrapper.removeAttribute('hidden');
+				toggleButton.setAttribute('aria-expanded', true);
+			}
+		});
+	});
+}</script>
+	</head>
+	<body>
+<nav id="navi" class="navbar navbar-expand-lg navbar-light navbar-text bg-light">
+  <div class="container-fluid"><a
+    class="navbar-brand mr-auto"
+    href="./index.html">
+    ABD Productions
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    id="navbarSupportedContent1"
+    class="collapse navbar-collapse">
+    <ul
+      id="navlist"
+      class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="./skywatchers.html">
+          SKYWATCHERS
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a
+          class="nav-link"
+          href="./Andares.html">
+          ANDARES
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="./about.html">
+          ABOUT
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="./contact.html">
+          CONTACT
+        </a>
+      </li>
+      <li class="nav-item donate">
+        <a
+          class="nav-link donate-a"
+          href="./donate.html">
+          DONATE
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+		</nav>
+		<nav class="navbar nav" id="sublist">
+<div class="mcontainer mr-auto ml-auto">
+
+    <ul
+      class="nav-tabs navbar-nav mr-auto"
+      role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#home"
+          data-toggle="tab"
+          aria-controls="home"
+          aria-expanded="true">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#history"
+          data-toggle="tab"
+          aria-controls="history">
+          History
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#gallery"
+          data-toggle="tab"
+          aria-controls="gallery">
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
+		</nav>
+<div class="container ml-auto mr-auto">
+  <div
+    id="tabContent"
+    class="tab-content col-md-9 col-sm-12 ">
+    <div
+      id="home"
+      class="tab-pane fade show active">
+      <div id="less-1">
+        <h3>SKYWATCHERS</h3>
+
+        <p id="HOME-CONTENT">
+          Founded in 2011, Skywatchers brings residents of San Francisco’s Tenderloin District into
+          partnership with professional artists to create multi-disciplinary, site-specific
+          performance installations that amplify the rich and complex stories, life experiences, and
+          talents of community members. Skywatchers is structured on the belief that relationships
+          are the first site of social change. We believe that large-scale transformation begins
+          with intimate, interpersonal exchange and that all stakeholders are transformed in this
+          process—artists, resident participants, as well as site staff.
+        </p>
+
+        <div
+          id="more-1"
+          class="fulltext">
+			<a class="more" href="#more-1">Show more</a>
+          <p>
+            Skywatchers is committed to justice and equity as a critique of the current societal
+            structures that marginalize large segments of the population. Creative expression and
+            artistry are the foundation of a unique set of methodological practices to resist,
+            confront, expose, or intervene in those structures, working towards social change on the
+            individual and systemic levels. We believe in the power of art and collective creative
+            endeavors to transform lives, embody our interconnectedness, and infuse our lives with
+            agency, possibility, and increased vitality.
+          </p>
+
+          <a
+            class="less"
+            href="#less-1">
+            Show Less
+          </a>
+        </div>
+        	
+      </div>
+    </div>
+
+    <div
+      id="history"
+      class="tab-pane fade ">
+      <div>
+        <h3>History of the Skywatchers</h3>
+
+        <p id="shistory1">
+          Skywatchers was conceived by Anne Bluethenthal in 2011 when she visited the Tenderloin
+          National Forest (TNF) to explore the possibility of a site-specific work.  The Forest,
+          surrounded by multi-story residential buildings and single room occupancy hotels (SROs),
+          is one of the very few open spaces in this high-density neighborhood. As Bluethenthal
+          continued to visit the Forest over a few months, she grew interested in creating a work
+          there in collaboration with residents of the Senator Hotel. This is where it starts.
+        </p>
+
+        <p id="shistory2">
+          The history of Skywatchers is one of learning by listening; the work we make both informs
+          and is informed by that learning process. The organizational and creative history of
+          Skywatchers over the last eight years can be described by several advances, both in scale,
+          scope, and intention. We are now a multi-site program with emerging resident leadership.
+          Along the way the work has become more multi-disciplinary, and we have become more
+          strategic in positioning the work—and resident voices—in the public arena to effect
+          change. As resident engagement in the ensemble has deepened, their integration with
+          professionally trained artists has become more seamless.
+        </p>
+      </div>
+    </div>
+ <div
+      class="tab-pane fade"
+	  id="gallery">
+	 <div id="slider">
+  <img src="img/Skywatchers/01.jpg" alt="caption 1">
+  <img src="img/Skywatchers/02.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/03.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/04.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/05.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/06.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/07.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/08.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/09.jpg" alt="caption 1">
+	 <img data-src="img/Skywatchers/10.JPG" alt="caption 1">
+  
+   
+
+
+	</div>
+	  </div>
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+
+		    <ul><li>
+	  A great sho
+w on Oct 31st</li><li>Another great show on Dec 31st</li></ul>
+            <!--div>
+              <ul >
+                <li>
+                  
+                  
+                  <a href="http://www.abdproductions.org/wp-content/uploads/2015/04/Skywatchers1.pdf">
+                    Making Art, Building Community in the Tenderloin
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="http://www.epicenter-sf.org/5-27-5th-annual-skywatchers-festival-home-is-where-the-body-is/">
+                    5th Annual Skywatchers Festival: Home Is Where the Body Is
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="http://hoodline.com/2016/02/using-dance-performance-skywatchers-illuminates-lives-of-tl-residents?utm_source=individual-stories&utm_medium=email&utm_campaign=stories">
+                    Using Dance & Performance, Skywatchers Illuminates Lives of TL Residents
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.dickermanprints.com/blog/deirdre-visser-skywatchers-tenderloin-project?utm_source=Dickerman+Prints+List&utm_campaign=5a494b5928-dierdre-visser-email&utm_medium=email&utm_term=0_b698caf600-5a494b5928-69939101">
+                    The         Power of Self-Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.sfexaminer.com/news/vigil-honors-those-who-died-on-the-citys-streets/">
+                    SF Examiner: Vigil honors those who died on The City's   Streets (2018)
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://dancersgroup.org/2019/04/setting-skywatchers-at-the-table-connection-empowerment-and-art-at-the-margins/">
+                    Skywatchers' "At the Table": Connection,         Empowerment, and Art at the Margins
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://hoodline.com/2019/03/life-in-an-sro-tenderloin-residents-open-their-home-to-neighbors-for-performance-art-piece">
+                    Life         in an SRO: Tenderloin residents open their home to neighbors for
+                    performance art piece
+                  </a>
+                </li>
+              </ul>
+            </div-->  </div>
+	</div></div>
+	<script src="js/ideal-image-slider.js"></script>
+<script src="js/iis-captions.js"></script>	
+<script src="js/iis-bullets.js"></script>
+<script src="js/iis-thumb-nav.js"></script>
+
+<script>
+var slider = new IdealImageSlider.Slider('#slider');
+	slider.addCaptions();
+	slider.addThumbNav();
+	slider.start();
+</script>
+	</body>
+		</html>
+		<!--scrCelebrating the SKYWATCHERS</h3>
+
+<div id

@@ -1,6 +1,9 @@
-<html><head><meta charset="UTF-8"></meta>
-
-<title>parallax example</title>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- todo: finalize picture selection for parallax backgrounds with Deirdre. -->
+<title>ABD Productions</title>
 
 <!-- <link href="node_modules/custom/css/parallax2.css" rel="stylesheet" type="text/css"> -->
 
@@ -9,240 +12,66 @@
   }
 </style>
 
-<link
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-rel="stylesheet"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-crossorigin="anonymous">
-</link>
-
-<link
-  href="./node_modules/custom/css/custom.css"
-  rel="stylesheet"
-  type="text/css">
-</link>
-
-<link
-  href="./node_modules/custom/css/hnav.css"
-  rel="stylesheet"
-  type="text/css">
-</link>
-
-<link
-  href="./owlcarousel/owl.carousel.min.css"
-  rel="stylesheet">
-</link>
-
-<link
-  href="./owlcarousel/owl.theme.default.min.css"
-  rel="stylesheet">
-</link>
-
 <!--
-  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
-  web page. We recommend that you do not modify it.
+  link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"
 -->
 
-<script>var __adobewebfontsappname__="dreamweaver"</script>
+<link
+  href="node_modules/custom/css/hnav.css"
+  rel="stylesheet"
+  type="text/css">
 
-<script src="./owlcarousel/owl.carousel.min.js"></script>
+
+<link
+  href="node_modules/custom/css/theme.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+<link
+  href="node_modules/custom/css/custom.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.3.1.js"></script>
+<script src="node_modules/vendor/jquery-3.3.1.min.js"></script>
+<script src="node_modules/vendor/babel-polyfill-6.26.0.min.js"></script>
+<!--script type="text/javascript">
+  $(document).ready(function(){         $("#EventModal").modal('show');     });
+</script-->
+
+<!--
+  script> // When the user scrolls the page, execute myFunction window.onscroll = function()
+  {myFunction()};  // Get the navbar var navbar = document.getElementById("stickyNav");  // Get the
+  offset position of the navbar var sticky = navbar.offsetTop;  // Add the sticky class to the
+  navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {   if (window.pageYOffset >= sticky) {     navbar.classList.add("sticky")
+  } else {     navbar.classList.remove("sticky");   } }  </script
+-->
+
+<script>
+  $('.navbar-toggler').click(() => {
+      $('.navbar-collapse').toggleClass('show');
+  });
+});
+</script>
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
 
 <script
   src="http://use.edgefonts.net/droid-sans:n4:default.js"
   type="text/javascript">
 </script>
-</head>
+	</head>
 <body>
-  <div class="owl-carousel">
-<div id="surprise">
-  <div id="Reveal">
-    <div id="header">
-      <div id="cname">
-        <h2 id="name">
-          <span class="initial">A</span>
-
-          <span class="fullname">nne</span>
-
-          <span class="initial">B</span>
-
-          <span class="fullname">luethenthal &</span>
-
-          <span class="initial">D</span>
-
-          <span class="fullname">ancers</span>
-        </h2>
-      </div>
-
-      <div>
-        <h3><p id="mission">helping people read this mission statementn</p></h3>
-
-        <div id="pointer"><p>\/</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div><section
-    id="skywatchers"
-    class="module parallax parallax-1">
-    <div class="container"><h1>Skywatchers</h1></div>
-  </section>
-
-
-
-  <section
-    id="scontent"
-    class="module content">
-    <div class="container">
-      <div>
-        <h2>Lorem Ipsum Dolor</h2>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      </div>
-
-      <div
-        id="snews"
-        class="card col-sm-10 col-md-5">
-        <div class="card-body">
-          <h5 class="card-title">News and Updates</h5>
-
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-          <p>
-            <a
-              class="card-link"
-              href="#">
-              First Link
-            </a>
-          </p>
-
-          <p>
-            <a
-              class="card-link"
-              href="#">
-              Second Link
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div
-        id="sevents"
-        class="card col-sm-10 col-md-5">
-        <div class="card-body">
-          <h5 class="card-title">Upcoming Events</h5>
-
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-          <p>
-            <a
-              class="card-link"
-              href="#">
-              First Link
-            </a>
-          </p>
-
-          <p>
-            <a
-              class="card-link"
-              href="#">
-              Second Link
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<div>
-  <section
-    id="ANDARES"
-    class="module parallax parallax-2">
-    <div class="container"><h1>Andares</h1></div>
-  </section>
-
-  <section class="module content">
-    <div class="container">
-      <div>
-        <h2>Lorem Ipsum Dolor</h2>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      </div>
-
-      <div>
-        <div
-          id="anews"
-          class="card col-sm-10 col-md-5">
-          <div class="card-body">
-            <h5 class="card-title">News and Updates</h5>
-
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-            <p>
-              <a
-                class="card-link"
-                href="#">
-                First Link
-              </a>
-            </p>
-
-            <p>
-              <a
-                class="card-link"
-                href="#">
-                Second Link
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div
-          id="aevents"
-          class="card col-sm-10 col-md-5">
-          <div class="card-body">
-            <h5 class="card-title">Upcoming Events</h5>
-
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-            <p>
-              <a
-                class="card-link"
-                href="#">
-                First Link
-              </a>
-            </p>
-
-            <p>
-              <a
-                class="card-link"
-                href="#">
-                Second Link
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<div>
-  <section class="module parallax parallax-3">
-    <div class="container"><h1>History</h1></div>
-  </section>
-
-  <section class="module content">
-    <div class="container">
-      <h2>Lorem Ipsum Dolor</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    </div>
-  </section>
-</div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav
+  class="navbar navbar-expand-lg navbar-light navbar-text bg-light"
+  style="z-index: 1050; position:fixed;">
   <a
-    class="navbar-brand"
-    href="#">
+    class="navbar-brand mr-auto"
+    href="http://www.abdproductions.org">
     ABD Productions
   </a>
 
@@ -254,7 +83,7 @@ crossorigin="anonymous">
     aria-controls="navbarSupportedContent1"
     aria-expanded="false"
     aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+	  <span class="navbar-toggler-icon">MENU</span>
   </button>
 
   <div
@@ -262,120 +91,270 @@ crossorigin="anonymous">
     class="collapse navbar-collapse">
     <ul
       id="navlist"
-      class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
+      class="navbar-nav ml-auto">
+      <li class="nav-item">
         <a
-          id="navbarDropdown1"
-          class="nav-link dropdown-toggle"
-          href="#ANDARES"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
+          class="nav-link "
+          href="./skywatchers.html">
           SKYWATCHERS
         </a>
-
-        <div
-          class="dropdown-menu"
-          aria-labelledby="navbarDropdown1">
-          <a
-            class=" nav-link dropdown-item"
-            href="#supdates">
-            News
-          </a>
-
-          <a
-            class="navlink dropdown-item"
-            href="#sevents"p
-            Events
-          </a>
-        </div>
       </li>
 
-      <li class="nav-item dropdown">
+      <li class="nav-item ">
         <a
-          id="navbarDropdown2"
-          class="nav-link dropdown-toggle"
-          href="#ANDARES"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
+          class="nav-link"
+          href="./Andares.html">
           ANDARES
         </a>
-
-        <div
-          class="dropdown-menu"
-          aria-labelledby="navbarDropdown1">
-          <a
-            class="nav-link dropdown-item"
-            href="#aupdates">
-            News
-          </a>
-
-          <a
-            class="nav-link dropdown-item"
-            href="#aevents">
-            Events
-          </a>
-        </div>
       </li>
 
-      <li>
+      <li class="nav-item ">
         <a
           class="nav-link"
-          href="#item-3">
-          History
+          href="./about.html">
+          About
         </a>
       </li>
-
-      <li>
+      <li class="nav-item">
         <a
           class="nav-link"
-          href="#item-3">
-          Community
-        </a>
-      </li>
-
-      <li>
-        <a
-          class="nav-link"
-          href="#item-3">
+          href="./contact.html">
           Contact
         </a>
       </li>
 
-      <li class="donate">
+      <li class="donate nav-item">
         <a
           class="nav-link donate-a"
-          href="#item-3">
+          href="./donate.html">
           Donate
         </a>
       </li>
     </ul>
   </div>
-</nav>
-  <script src="js/popper.min.js"></script>
+	</nav>
+<section id="reveal">
+  <!--div class="container" -->
+	<div
+    id="cname"
+    class="col-md-6  col-sm-12"
+    style="position:relative; left:calc(50% - 30rem);" >
+    <h2
+      id="name"
+      style="text-align:right">
+      <span class="A">A</span>
+      
+      <span class="A">B</span>
+     
+      <span class="A">D</span>
+		<br>
+      <span class="A">Productions</span>
+    </h2>
 
-  <script src="js/bootstrap-4.3.1.js"></script>
+<br>
+  <!--style="position:relative; left:calc(50% - 30rem);"-->
 
-  <script src="./node_modules/vendor/jquery-3.3.1.min.js"></script>
+    <h4 style="text-align:right">
+      reflecting narratives too often invisible in our collective cultural production, inspiring
+      social change and awakening our collective humanity.
+    </h4>
 
-  <script src="./node_modules/vendor/babel-polyfill-6.26.0.min.js"></script>
+    <p></p>
+  </div>
 
-  <script src="./node_modules/custom/js/jquery.sticky-nav.js"></script>
-  <!--script src="jquery.min.js"></script-->>
-<script src="owlcarousel/owl.carousel.min.js"></script>
-<script>
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});</script>
+  <div id="pointer"><p>\/</p></div>
+	  <!--/div-->
+</section>
+
+<!--
+  nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="stickyNav"> <a
+  class="navbar-brand"
+  href="#">ABD Productions</a>     <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#navbarSupportedContent1"
+  aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span> </button>     <div class="collapse navbar-collapse"
+  id="navbarSupportedContent1"> <!--    fixme: fix spacing of navbar so it is distributed.
+-->
+
+<!--
+  ul id="navlist" class="navbar-nav ml-auto">       <li class="nav-item"> <a class="nav-link "
+  href="#skywatchers" id="navbarDropdown1"> SKYWATCHERS </a> </li>       <li class="nav-item "> <a
+  class="nav-link" href="#Andares" > ANDARES </a> </li>       <li ><a class="nav-link"
+  href="#about">About</a></li>              <li><a class="nav-link" href="contact.html">Contact</a></li>       <li
+  class="donate"><a class="nav-link donate-a" href="#item-3">Donate</a></li>     </ul>      </div>
+  </nav
+-->
+
+<section
+  id="skywatchers"
+  class="module parallax parallax-1">
+  <div class="container"><h1 class="ml-auto mr-auto">Skywatchers</h1></div>
+</section>
+
+<section
+  id="scontent"
+  class="module content">
+  <div class="container" style="overflow:hidden;">
+    <div class="col-md-9 col-sm-12">
+      <h2>Lorem Ipsum Dolor</h2>
+      <!-- fixme: see about improving verbage of Skywatchers. Use more direct, conciselanguage. -->
+     <blockquote><p>
+        People that don’t have a voice come up and say what they feel. They are telling the truth about the way we are, the way poor people are, and it makes you speak up as to what’s going on with society today</p></blockquote>
+		<div style="text-align:right;">-Quincy O., neighbor, Skywatcher</div>
+
+      <p></p>
+    </div>
+	  <div class="landingrpanel"><ul><li><a  href="./skywatchers.html#home">About</a></li>
+	<li><a href="./skywatchers.html#history">History</a></li><li><a  href="./skywatchers.html#gallery">Gallery</a></li></ul></div>
+  </div>
+</section>
+
+<section
+  id="ANDARES"
+  class="module parallax parallax-2">
+  <div class="container"><h1 class="ml-auto mr-auto">Andares</h1></div>
+</section>
+<section
+  id="acontent"
+  class="module content">
+  <div class="container" style="overflow:hidden;">
+    <div class="col-md-9 col-sm-12">
+      <h2>Lorem Ipsum Dolor</h2>
+      <!-- fixme: see about improving verbage of Skywatchers. Use more direct, conciselanguage. -->
+      <blockquote><p>
+        The intensity of the dancing, wrote choreographer Mercy Sidbury, operated as metaphor for the “full commitment that the combatants had to their struggle, dancing or fighting as if their lives depended on it...I loved having them on top of me and was amazed by their force.”
+      </p></blockquote>
+    </div>
+	  <div class="landingrpanel"><ul><li><a  href="./andares.html#home">About</a></li>
+	<li><a href="./andares.html#history">History</a></li><li><a  href="./andareshtml#gallery">Gallery</a></li></ul></div>
+  </div>
+</section>
 
 
-<script>
-    // (3) Instantiate StickyNav       $(document).ready(function() {         $('nav').stickynav();});
-    $('.navbar-toggler').click(() => {           $('.navbar-collapse').toggleClass('show');
-    });
-  </script>
-</body>
+<section id="about" class="module parallax parallax-3">
+  <div class="container" style="overflow:hidden;"><h1 class="mr-auto ml-auto">ABOUT</h1></div>
+</section>
+<section
+  id="abcontent"
+  class="module content">
+	<div class="container" style="overflow:hidden;">
+  <!--div class="col-sm-12 col-md-9 "-->
+    <h2>Lorem Ipsum Dolor</h2>
+    <!--
+      todo: get description from Deirdre for history and community resources. Suggestion to combine
+      the to direct flow  of site to better demonstrate collaboration with community.
+    -->
+    <p>
+      ABD Founder and Artistic Director Anne Bluethenthal has been a pioneer in socially engaged art
+      for over three decades. She has built a deceptively subversive repertoire deeply rooted in
+      feminist, anti-colonial, and anti-patriarchal methodology. And while creating over 200
+      performance works, her methodology and choreographic vision have been enormously influential
+      on at least two generations of SF dancers.
+    </p>
+	<!--</div>-->
+			<div class="spacer">&nbsp;</div>
+	<div class="landingrpanel"><ul><li><a href="./about.html#mission">Mission Statement
+		</a></li><li><a href="about.html#history">History</a></li><li><a href="./about.html#AnneProfile">About the Founder</a></li></ul></div>
+		</div>
+</section>
+<section class="bg-dark" id="contact">
+  <div class="mcontainer" style="margin-top:1.5rem!important;"><h4>Message us for more information</h4>
+    Email us directly at  <a href="mailto:info@abdproductions.org">info@abdproductions.org</a> or through this form:
+      <div class="col-sm-12 col-md-6 form-top">
+        <div class="panel panel-danger">
+          <p></p>
+			<div class="panel-body">
+            <form id="reused_form">
+              <div class="form-group">
+                <!--label>
+                  <i
+                    class="fa fa-user"
+                    aria-hidden="true">
+                  </i>
+                  Name
+                </label-->
+                <input
+                  class="form-control"
+                  name="name"
+                  type="text"
+                  placeholder="Enter Full Name"/>
+              </div>
+              <div class="form-group">
+                <!--label>
+                  <i
+                    class="fa fa-envelope"
+                    aria-hidden="true">
+                  </i>
+                  Email
+                </label-->
+                <input
+                  class="form-control"
+                  name="email"
+                  type="email"
+                  placeholder="Enter Email"/>
+              </div>
+              <div class="form-group">
+                <!--label>
+                  <i
+                    class="fa fa-comment"
+                    aria-hidden="true">
+                  </i>
+                  Message
+                </label-->
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="6"
+                  placeholder="Type Your Message">
+                </textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-raised btn-block">SEND MESSAGE</button>
+              </div>
+            </form>
+            <div
+              id="error_message"
+              style="width:100%; height:100%; display:none; ">
+              <h4>Error</h4>
+              Sorry there was an error sending your message. Please try again.
+            </div>
+            <div
+              id="success_message"
+              style="width:100%; height:100%; display:none; ">
+              <h2>Message sent. Thank you for reaching out to us.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<!-- fixme: get modal working for events. -->
+
+<!--div
+  id="EventModal"
+  class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          class="close"
+          type="button"
+          data-dismiss="modal"
+          aria-hidden="true">
+          ×
+        </button>
+      </div>
+      <div
+        class="modal-body"
+        style="width:85%; text-align:center;">
+        <img src="images/screenshot-www.counterpulse.org-2019.09.24-18_37_38.png"/>
+      </div>
+    </div>
+  </div>
+</div-->
+
+
+	</body>
 </html>

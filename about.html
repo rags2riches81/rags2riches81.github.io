@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About | ABD Productions</title>
+
+	<!--link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous" -->
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<link
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		rel="stylesheet">
+<link
+		href="node_modules/custom/css/custom.css"
+		rel="stylesheet"
+		type="text/css">
+<link
+		href="node_modules/custom/css/theme.css"
+		rel="stylesheet"
+		type="text/css">
+
+	<!-- <link href="node_modules/custom/css/custom2.css" rel="stylesheet" type="text/css"> -->
+
+<link
+		href="node_modules/custom/css/hnav.css"
+		rel="stylesheet"
+		type="text/css">
+<link
+		href="node_modules/custom/css/photo.css"
+		rel="stylesheet"
+		type="text/css">
+
+
+	<!--
+	The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
+	web page. We recommend that you do not modify it.
+  -->
+
+<script>var __adobewebfontsappname__ = "dreamweaver"</script>
+<script
+		src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3:default.js"
+		type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__ = "dreamweaver"</script>
+  <script src="http://use.edgefonts.net/droid-sans:n4:default.js" type="text/javascript"></script>
+<script>
+if ('querySelector' in document &&
+    'addEventListener' in window) {
+
+    var toggleButtons = document.querySelectorAll('.toggle-content');
+    var fullTextWrappers = document.querySelectorAll('.fulltext');
+    var fullText;
+    var toggleButtonText;
+
+
+    [].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+        // hide all full text on load
+        fullTextWrapper.setAttribute('hidden', true);
+    });
+
+    [].forEach.call(toggleButtons, function(toggleButton) {
+        // show toggle more buttons
+        toggleButton.removeAttribute('hidden');
+
+        // add listener for each button
+        toggleButton.addEventListener('click', function () {
+
+            fullTextWrapper = this.parentElement.querySelector('.fulltext');
+            toggleButtonText = this.querySelector('.text');
+
+            // change attributes and text if full text is shown/hidden
+            if (!fullTextWrapper.hasAttribute('hidden')) {
+                toggleButtonText.innerText = 'Show More';
+                fullTextWrapper.setAttribute('hidden', true);
+                toggleButton.setAttribute('aria-expanded', false);
+            } else {
+                toggleButtonText.innerText = 'Show Less';
+                fullTextWrapper.removeAttribute('hidden');
+                toggleButton.setAttribute('aria-expanded', true);
+            }
+        });
+    });
+}</script>
+</head>
+ <body>
+<nav class="navbar navbar-expand-lg navbar-light navbar-text bg-light"> <a class="navbar-brand mr-auto" href="#">ABD Productions</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul id="navlist" class="navbar-nav ml-auto">
+      <li class="nav-item"> <a class="nav-link " href="#home" id="navbarDropdown1"> SKYWATCHERS </a> </li>
+      <li class="nav-item "> <a class="nav-link" href="./Andares.html" > ANDARES </a> </li>
+      <li ><a class="nav-link" href="#item-3">History</a></li>
+      <li ><a  class="nav-link" ahref="#item-3">Community </a></li>
+      <li><a class="nav-link" href="#item-3">Contact</a></li>
+      <li class="donate"><a class="nav-link donate-a" href="#item-3">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="sublist">
+	<nav class="navbar nav "
+	>
+  <div class="mcontainer " >
+    <ul
+		    class="nav-tabs navbar-nav mr-auto"		    role="tablist">
+      <li class="nav-item"> <a
+		      class="nav-link"
+		      href="#home"
+		      data-toggle="tab"
+		      aria-controls="home"
+		      aria-expanded="true"> Home </a> </li>
+      <li class="nav-item"> <a
+		      class="nav-link"
+		      href="#history"
+		      data-toggle="tab"
+		      aria-controls="news"> History </a> </li>
+      <li class="nav-item"> <a
+		      class="nav-link"
+		      href="#gallery"
+		      data-toggle="tab"
+		      aria-controls="AnneProfile"> About Anne </a> </li>
+    </ul>
+  </div>
+	</nav></div>
+<div class="container ml-auto mr-auto container-bg">
+  <div
+		  id="tabContent"
+		  class="tab-content ">
+    <div
+		    id="home"
+		    class="tab-pane fade show active">
+      <h3>About ABD</h3>
+	    <h4>Mission Statement</h4>
+	    ABD Productions is a multicultural organization that inspires social change and awakens our collective humanity through the arts. The company identifies and promotes ways art can foster social equality, economic parity, and access to creative resources both locally and globally. Using art as a catalyst and common language, ABD strives to engage artists, co-creators, and non-traditional audiences in San Francisco, reflecting narratives too often invisible in our collective cultural production.
+    </div>
+    <div
+		    id="history"
+		    class="tab-pane fade ">
+
+	      <!-- todo: paste in history information about ABD -->
+	     <div id="less-1" >
+		     <h4>History of ABD</h4>
+	    ABD Founder and Artistic Director Anne Bluethenthal has been a pioneer in socially engaged art for over three decades. She has built a repertoire at once deceptively subversive and deeply rooted in a feminist, anti-colonial, and anti-patriarchal methodology. Raised in the south from a lineage of civil rights activists, Anne fused her social conscience with a lifelong study of liberatory somatic practices to create a feminist approach to dance that undermines traditional dance conventions.  While creating over 200 performance works, Anne has been a mentor and educator to hundreds of young artists.
+(MORE) <div class="fulltext" id="more-1"> <p>Political and psycho-physical, her methodology and choreographic vision
+                                                     have been enormously influential on at least two generations of
+                                             SF dancers. She modeled a way of metabolizing outrage through the arts,
+                                             responding to injustice and inspiring action through a process of creating work predicated on non-harm to the artist-activist.</p>
+<p>Bluethenthal’s pivotal work in social engagement through performance began in her early politically- motivated
+             dances, continues in the ongoing collaborative work in El Salvador, and reaches a deep level of clarity
+       with Skywatchers, where her philosophy of art-making ‘of, by and for’ the people has been most fully realized
+       in 8 years of co-creation with Tenderloin residents.</p>
+    </div>
+
+        </div>
+    <div
+		    id="AnneProfile"
+		    class="tab-pane fade">
+      <!-- todo: paste in Anne's profile. (new picture of Anne for the profile?-->
+<h4>Anne Bluethenthal</h4>
+      Founder and Artistic Director of ABD Productions, Anne Bluethenthal bridges the worlds of
+      formal concert dance and community-engaged art. She has received awards and recognition from Curve Magazine,
+      the SF Chronicle’s Best of the Year, SF Weekly’s Black Box, the SF Bay Guardian’s Goldie Award for Achievement
+      in Dance, and the Rhinette Award for Best Choreography. Her work has been presented nationally and
+      internationally and is funded by the City of San Francisco, the California Arts Council, the NEA, and numerous
+      foundations.
+      </div>
+      <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+    <ul>
+      <li>A great show on Oct 31st</li>
+      <li>Another great show on Dec 31st</li>
+    </ul>	  
+  </div>
+    </div></div></div></div></body>
+</html>

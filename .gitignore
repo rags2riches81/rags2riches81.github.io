@@ -6518,3 +6518,4 @@ vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd
 vagrant/.vagrant/rgloader/loader.rb
 vagrant/Vagrantfile
 web.config
+node_modules/listmessenger-light-2.2.1/css/jquery/images/ui-bg_flat_75_ffffff_40x100.png

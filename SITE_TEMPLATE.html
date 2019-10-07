@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+
+<title>Skywatchers | ABD Productions</title>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+  rel="stylesheet">
+
+
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet">
+
+  <!--link rel="stylesheet" href="node_modules/custom/css/ideal-image-slider.css"-->
+
+<link
+  href="node_modules/custom/css/theme.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+<link
+  href="node_modules/custom/css/custom.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+
+<link
+  href="node_modules/custom/css/hnav.css"
+  rel="stylesheet"
+  type="text/css">
+
+
+<!--link
+  href="node_modules/custom/css/photo.css"
+  rel="stylesheet"
+  type="text/css"-->
+
+
+<style>
+	.fulltext p,
+.less {
+	display: none;
+}
+
+.fulltext:target p,
+.fulltext:target .less {
+	display: block;
+}
+
+.fulltext:target .more {
+	display: none;
+}
+</style>
+
+
+<!--
+  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
+  web page. We recommend that you do not modify it.
+-->
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+
+<script
+  src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3:default.js"
+  type="text/javascript">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+if ('querySelector' in document &&
+	'addEventListener' in window) {
+
+	var toggleButtons = document.querySelectorAll('.toggle-content');
+	var fullTextWrappers = document.querySelectorAll('.fulltext');
+	var fullText;
+	var toggleButtonText;
+
+
+	[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+		// hide all full text on load
+		fullTextWrapper.setAttribute('hidden', true);
+	});
+
+	[].forEach.call(toggleButtons, function(toggleButton) {
+		// show toggle more buttons
+		toggleButton.removeAttribute('hidden');
+
+		// add listener for each button
+		toggleButton.addEventListener('click', function () {
+
+			fullTextWrapper = this.parentElement.querySelector('.fulltext');
+			toggleButtonText = this.querySelector('.text');
+
+			// change attributes and text if full text is shown/hidden
+			if (!fullTextWrapper.hasAttribute('hidden')) {
+				toggleButtonText.innerText = 'Show More';
+				fullTextWrapper.setAttribute('hidden', true);
+				toggleButton.setAttribute('aria-expanded', false);
+			} else {
+				toggleButtonText.innerText = 'Show Less';
+				fullTextWrapper.removeAttribute('hidden');
+				toggleButton.setAttribute('aria-expanded', true);
+			}
+		});
+	});
+}</script>
+	</head>
+	<body>
+<nav id="navi" class="navbar navbar-expand-lg navbar-light navbar-text bg-light">
+  <div class="container-fluid"><a
+    class="navbar-brand mr-auto"
+    href="http://www.abdproductions.org">
+    ABD Productions
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    id="navbarSupportedContent1"
+    class="collapse navbar-collapse">
+    <ul
+      id="navlist"
+      class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="./skywatchers.html">
+          SKYWATCHERS
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a
+          class="nav-link"
+          href="./Andares.html">
+          ANDARES
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="./about.html">
+          ABOUT
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="./contact.html">
+          CONTACT
+        </a>
+      </li>
+      <li class="nav-item donate">
+        <a
+          class="nav-link donate-a"
+          href="./donate.html">
+          DONATE
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+		</nav>
+		<nav class="navbar nav" id="sublist">
+  <div class="mcontainer mr-auto ml-auto">
+
+    <ul
+      class="nav-tabs navbar-nav mr-auto"
+      role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#home"
+          data-toggle="tab"
+          aria-controls="home"
+          aria-expanded="true">
+          TAB1
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#tab2"
+          data-toggle="tab"
+          aria-controls="tab2">
+          TAB2
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#tab3"
+          data-toggle="tab"
+          aria-controls="tab3">
+        Tab3
+        </a>
+      </li>
+    </ul>
+  </div>
+		</nav>
+<div class="container ml-auto mr-auto">
+  <div
+    id="tabContent"
+    class="tab-content col-md-9 col-sm-12 ">
+    <div
+      id="home"
+      class="tab-pane fade show active">
+      <div id="less-1">
+        <h3>Tab Subject</h3>
+
+        <p id="HOME-CONTENT">
+
+          Tab content paragraph 1
+          I can't wait to devour the cock custard from his master of ceremonies. By now, my herring hole was dripping like someone had poured fairy liquid into Niagara Falls. The seemingly never-ending streams of steamin' semen emanating from his one-eyed milkman soon had me coated like a plasterer's radio. It was bliss having his cheese-crusted cock probed inside me again; stuffing my municipal cockwash with a 15" spiked vibrator just didn't get my shame portal spraying like it used to. Within no time, I could feel the shitty man fat seeping from my black hole and all over my hairy goblet.
+
+        </p>
+
+        <div
+          id="more-1"
+          class="fulltext">
+			<a class="more" href="#more-1">Show more</a>
+          <p>
+           The thrusting makes me flood my sex wee all over his batter blaster. After having my pink velvet sausage wallet plowed, he then proceeded to fuck my fudge factory. The slamming of my marmite motorway was so vigorous, he soon found his kids on a swing joining his purple beaver buster deep in my balloon knot. I can't wait to gobble the magician's wax from his one-eyed monster. Now, I've seen more helmets than Hitler, but the sight of his veiny quim prod made my clunge gunge dribble like Adele waiting for Greggs to open.
+          </p>
+
+          <a
+            class="less"
+            href="#less-1">
+            Show Less
+          </a>
+        </div>
+        	
+      </div>
+    </div>
+
+    <div
+      id="tab2"
+      class="tab-pane fade ">
+      <div>
+        <h3>Tab Title</h3>
+
+        <p id="shistory1">
+          By now, my municipal cockwash was seeping like there was a midget inside me with a super soaker. The feeling of his penis pudding trickling down my throat got my spaff flowing quicker than snot off a whip. The thrusting makes me splurge my beige slime all over his long-dong silver. It was bliss having his greasy slimelight rammed inside me again; stuffing my tuna canal with my fist just didn't get my salmon slit surging like it used to. There was Da Vinci load foaming from his brie baton and I was wetter than a bathmaid's elbow. We were ready for more.
+        </p>
+
+        <p id="shistory2">
+           Now, I've taken more poundings than the Somme, but the sight of his vein cane made my clunge gunge slime like Adele waiting for Greggs to open. By now, my carp cavity was draining like someone had poured fairy liquid into Niagara Falls. It was bliss having his chubstep slid inside me again; stuffing my depravity cavity with a 15" spiked vibrator just didn't get my ladytown spouting like it used to. If I don't fish for pearls to get my sex wee oozing from my fuck trench, his kebeb skewer is going to leave my vertical garden resembling the south end of a badger going north. Within no time, I could feel the shitty cock custard leaching from my brown mile and all over my furburger.
+
+        </p>
+      </div>
+    </div>
+
+
+ <div
+         id="tab3"
+         class="tab-pane fade ">
+      <div>
+         <h3>Tab Title</h3>
+        <p> Hours of hammering like this would leave any girl's flappy meal looking like a werewolf with it's throat cut, and I was no different! I can't wait to devour the magician's wax from his flesh gordon. The pounding makes me spit my minge mucus all over his blue-veined custard chucker. Some girls are happy just to play the clitar when they're alone, but I can't get off without having my fist in my salmon slit and a 15" spiked vibrator up my puckered brown eye. Within no time, I could feel the shitty man fat trickling from my tradesman's entrance and all over my lunchmeat.
+</p>
+	</div>
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+    <ul><li><a href="#">A great show on Oct 31st</a></li><li><a href="#">Another great show on Dec 31st</a></li></ul>
+  </div>
+</div>
+<!--script src="./node_modules/custom/js/ideal-image-slider.js"></script-->
+	</div></div></body>
+</html>
+<!--<div
+  id="gallery"
+  class="tab-pane fade">
+  <h3>Celebrating the SKYWATCHERS</h3>
+
+<div id="slider">
+   <img src="img/01.​jpg">
+   <img data-src="img/02.​jpg">
+   <img data-src="img/03.​jpg">
+   <img data-src="img/04.​jpg">
+   <img data-src="img/05.​jpg">
+   <img data-src="img/06.​jpg">
+   <img data-src="img/07.​jpg">
+   <img data-src="img/08.​jpg">
+   <img data-src="img/09.​jpg">
+   <img data-src="img/10.​jpg">
+</div></div>-->
+

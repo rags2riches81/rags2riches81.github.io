@@ -1,0 +1,290 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="ideal-image-slider">Ideal Image Slider</h1>
+<p>The aim behind the Ideal Image Slider is to create a slider which has just the right amount of features,
+with no bloat and be easy to extend so that more features can be added as "extensions". Here are the ideals
+and core features I wanted to include:</p>
+<ul>
+<li>HTML5 (SEO optimised)</li>
+<li>CSS3 transitions (a few simple transitions like slide/fade)</li>
+<li>Left/Right navigation (including touch/swipe support)</li>
+<li>Responsive</li>
+<li>HiDPI (retina) support</li>
+<li>ARIA support</li>
+<li>Extremely simple to setup (no dependencies)</li>
+<li>Very extensible</li>
+<li>Uses progressive enhancement</li>
+<li>Open source (goes without saying)</li>
+</ul>
+<p>And, as an example, here are some features that <em>should not</em> be in the core and could be optional extensions:</p>
+<ul>
+<li>Themes or skins</li>
+<li>More transitions</li>
+<li>Bullet navigation</li>
+<li>Thumbnail navigation</li>
+<li>Full screen slider</li>
+<li>Video/Audio support</li>
+<li>etc...</li>
+</ul>
+<p><a href="http://gilbert.pellegrom.me/the-ideal-image-slider">Read the original blog post →</a></p>
+<h2 id="demos">Demos</h2>
+<ul>
+<li><a href="http://idealimageslider.com/demo/standard-slider.html">Standard Slider</a></li>
+<li><a href="http://idealimageslider.com/demo/links.html">With Links</a></li>
+<li><a href="http://idealimageslider.com/demo/using-the-api.html">Using the API</a></li>
+<li><a href="http://idealimageslider.com/demo/using-events.html">Using Events</a></li>
+<li><a href="http://idealimageslider.com/demo/multiple-sliders.html">Multiple Sliders</a></li>
+</ul>
+<h2 id="extensions">Extensions</h2>
+<ul>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/tree/master/extensions/bullet-nav">Bullet Navigation</a></li>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/tree/master/extensions/captions">Captions</a></li>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/wiki/Third-Party-Extensions">Third Party Extensions</a></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><strong>None</strong></li>
+</ul>
+<p>Ideal Image Slider is written in vanilla JS and has no dependancies.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To install the slider you can either manually download this repository or you can use <a href="http://bower.io">Bower</a>
+and run the following command:</p>
+<p><code>bower install ideal-image-slider --save</code></p>
+<p>Next you need to include the CSS file in the <code>&lt;head&gt;</code> section of your HTML and you need to include the script
+before the <code>&lt;/body&gt;</code> tag in your HTML. Note you can optionally include a theme CSS file in the <code>&lt;head&gt;</code> too.</p>
+<p><code>html
+&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;link rel="stylesheet" href="/path/to/ideal-image-slider.css"&gt;
+    &lt;link rel="stylesheet" href="/path/to/themes/default/default.css"&gt;
+    ...
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src="/path/to/ideal-image-slider.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></p>
+<p>Next you need to set up your slider HTML where you want it to appear in your page. It should look something
+like this:</p>
+<p><code>html
+&lt;div id="slider"&gt;
+    &lt;img src="img/1.jpg" alt="Minimum required attributes"&gt;
+    &lt;img data-src="img/2.jpg" src="" alt="Use data-src for on-demand loading"&gt;
+    &lt;img data-src="img/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Use data-src-2x for HiDPI devices"&gt;
+    &lt;a href="http://example.com"&gt;&lt;img data-src="img/4.jpg" src="" alt="Links work too"&gt;&lt;/a&gt;
+    ...
+&lt;/div&gt;</code></p>
+<p>There a few things to note about the structure of the images in your slider:</p>
+<ul>
+<li>This is an image slider, so only images are supported. Any other content will be removed.</li>
+<li>You can use the <code>data-src</code> attribute to load your images "on-demand" (i.e. images are not loaded until they are required).</li>
+<li>The first image should not use <code>data-src</code> so it is loaded if no JS is detected.</li>
+<li>If you specify a <code>data-src-2x</code> image, it will be used on devices that support HiDPI (such as Apple's retina devices).</li>
+</ul>
+<p>Finally you can create your slider by using the following Javascript:</p>
+<p><code>js
+new IdealImageSlider.Slider('#slider');</code></p>
+<p>If you want to tweak the settings or use the slider API it would look more like:</p>
+<p><code>js
+var slider = new IdealImageSlider.Slider({
+    selector: '#slider',
+    height: 400, // Required but can be set by CSS
+    interval: 4000
+});
+slider.start();</code></p>
+<p>Note: If you don't pass a <code>height</code> to the Javascript constructor you <strong>must</strong> set it
+in your CSS.</p>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>''</code></td>
+<td>CSS selector for the slider</td>
+</tr>
+<tr>
+<td>height</td>
+<td><code>'auto'</code></td>
+<td>Height of the slider. Can be <code>'auto'</code> (height changes depending on the height of the slide), a fixed px value (e.g. <code>400</code>) or an aspect ratio (e.g. <code>'16:9'</code>)</td>
+</tr>
+<tr>
+<td>initialHeight</td>
+<td><code>400</code></td>
+<td>If height is <code>'auto'</code> or an aspect ratio this is the height of the slider while the first image is loading</td>
+</tr>
+<tr>
+<td>maxHeight</td>
+<td><code>null</code></td>
+<td>If height is <code>'auto'</code> or an aspect ratio this is an optional max height in px for the slider (e.g. <code>800</code>)</td>
+</tr>
+<tr>
+<td>interval</td>
+<td><code>4000</code></td>
+<td>Time (in ms) to wait before changing to the next slide</td>
+</tr>
+<tr>
+<td>transitionDuration</td>
+<td><code>700</code></td>
+<td>Duration (in ms) of animated transition</td>
+</tr>
+<tr>
+<td>effect</td>
+<td><code>'slide'</code></td>
+<td>Transition effect (slide/fade by default)</td>
+</tr>
+<tr>
+<td>disableNav</td>
+<td><code>false</code></td>
+<td>Toggle the previous/next navigation (also disables touch and keyboard navigation)</td>
+</tr>
+<tr>
+<td>keyboardNav</td>
+<td><code>true</code></td>
+<td>Toggle keyboard navigation</td>
+</tr>
+<tr>
+<td>previousNavSelector</td>
+<td><code>''</code></td>
+<td>Selector for custom previous nav element</td>
+</tr>
+<tr>
+<td>nextNavSelector</td>
+<td><code>''</code></td>
+<td>Selector for custom next nav element</td>
+</tr>
+<tr>
+<td>classes</td>
+<td><code>{...}</code></td>
+<td>List of classes to be used by slider. Probably shouldn't be changed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="events">Events</h2>
+<p>Event callback functions can be passed in with the settings. For example:</p>
+<p><code>js
+new IdealImageSlider.Slider({
+    selector: '#slider',
+    onStart: function(){
+        console.log('onStart');
+    }
+});</code></p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onInit</td>
+<td>Callback that fires when slider and first image have loaded</td>
+</tr>
+<tr>
+<td>onStart</td>
+<td>Callback that fires when slider has started playing</td>
+</tr>
+<tr>
+<td>onStop</td>
+<td>Callback that fires when slider has stopped playing</td>
+</tr>
+<tr>
+<td>onDestroy</td>
+<td>Callback that fires when slider is destroyed</td>
+</tr>
+<tr>
+<td>beforeChange</td>
+<td>Callback that fires before a slide has changed</td>
+</tr>
+<tr>
+<td>afterChange</td>
+<td>Callback that fires after a slide has changed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="api">API</h2>
+<p>To use the API methods you must store the slider object. For example:</p>
+<p><code>js
+var slider = new IdealImageSlider.Slider('#slider');
+slider.start();</code></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start()</td>
+<td>Start the slider. Note the slider will automatically be stopped when navigation is used</td>
+</tr>
+<tr>
+<td>stop()</td>
+<td>Stop the slider</td>
+</tr>
+<tr>
+<td>previousSlide()</td>
+<td>Change to the previous slide</td>
+</tr>
+<tr>
+<td>nextSlide()</td>
+<td>Change to the next slide</td>
+</tr>
+<tr>
+<td>gotoSlide(index)</td>
+<td>Change to a specific slide (1 indexed)</td>
+</tr>
+<tr>
+<td>destroy()</td>
+<td>Destroy the slider</td>
+</tr>
+<tr>
+<td>get(attribute)</td>
+<td>Get an attribute value (attributes are mostly used internally)</td>
+</tr>
+<tr>
+<td>set(attribute, value)</td>
+<td>Set an attribute. Can be useful for storing custom data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="browsers">Browsers</h2>
+<p>Ideal Image Slider has been tested on:</p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari (Desktop + Mobile)</li>
+<li>Opera</li>
+<li>IE9+</li>
+</ul>
+<h2 id="contribute">Contribute</h2>
+<p>So you want to help out? That's awesome. Here is how you can do it:</p>
+<ul>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/labels/bug">Report a bug</a></li>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/labels/enhancement">Ask for a feature</a></li>
+<li><a href="https://github.com/gilbitron/Ideal-Image-Slider/pulls">Submit a pull request</a></li>
+</ul>
+<p>If you are submitting a pull request please adhere to the existing coding standards used throughout the code
+and only submit <strong>1 feature/fix per pull request</strong>. Pull requests containing multiple changes will be rejected.</p>
+<p>Note that if you submit a pull request you are aware that you are contributing to both the free (open source) version
+and the proprietary (commercial) version of the codebase and that your work may make money for Dev7studios.</p>
+<h2 id="credits">Credits</h2>
+<p>Ideal Image Slider was created by <a href="http://gilbert.pellegrom.me">Gilbert Pellegrom</a> from
+<a href="http://dev7studios.com">Dev7studios</a>. Released under the <a href="https://raw.githubusercontent.com/gilbitron/Ideal-Image-Slider/master/LICENSE">GPL license</a>.</p>
+<h2 id="other-projects">Other Projects</h2>
+<p>Check-out other stuff that we are working on : </p>
+<ul>
+<li><a href="https://themeisle.com">ThemeIsle</a></li>
+<li><a href="https://codeinwp.com/blog/">Codeinwp</a></li>
+<li><a href="https://revive.social">Revive.social</a></li>
+<li><a href="http://mystock.photos">Mystock.photos</a></li>
+</ul>
+</body></html>

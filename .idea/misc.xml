@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CssXFireSettings">
-    <general autoClear="false" autoExpand="false" />
-    <strategy useRoutes="false" mediaReduce="false" fileReduce="false" currentDocumentsReduce="false" resolveVariables="true" resolveMixins="true" />
-    <routes />
+    <general autoClear="false" autoExpand="true" />
+    <strategy useRoutes="true" mediaReduce="true" fileReduce="true" currentDocumentsReduce="true" resolveVariables="true" resolveMixins="true" />
+    <routes>
+      <file url="file://$PROJECT_DIR$" route="/" />
+    </routes>
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/example.html" />
+    <file url="file://$PROJECT_DIR$/iisstart.htm" />
   </component>
   <component name="StylelintService">
     <option name="executable" value="\stylelint.cmd" />

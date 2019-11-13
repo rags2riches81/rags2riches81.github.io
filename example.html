@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 
-<title>Untitled Document</title>
+<title>Skywatchers| ABD Productions</title>
 
-<link
+<!--link
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   rel="stylesheet"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous">
+  crossorigin="anonymous" -->
 
 
 <link
@@ -21,6 +21,11 @@
   href="node_modules/custom/css/custom.css"
   rel="stylesheet"
   type="text/css">
+
+  <link
+    href="node_modules/custom/css/theme.css"
+    rel="stylesheet"
+    type="text/css">
 
 
 <!-- <link href="node_modules/custom/css/custom2.css" rel="stylesheet" type="text/css"> -->
@@ -45,7 +50,7 @@
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 
 <script
-  src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4:default.js"
+  src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3,n7:default.js"
   type="text/javascript">
 </script>
 
@@ -66,10 +71,47 @@
   $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");         });
   });
 </script-->
+<script>
+if ('querySelector' in document &&
+	'addEventListener' in window) {
 
+	var toggleButtons = document.querySelectorAll('.toggle-content');
+	var fullTextWrappers = document.querySelectorAll('.fulltext');
+	var fullText;
+	var toggleButtonText;
+
+
+	[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+		// hide all full text on load
+		fullTextWrapper.setAttribute('hidden', true);
+	});
+
+	[].forEach.call(toggleButtons, function(toggleButton) {
+		// show toggle more buttons
+		toggleButton.removeAttribute('hidden');
+
+		// add listener for each button
+		toggleButton.addEventListener('click', function () {
+
+			fullTextWrapper = this.parentElement.querySelector('.fulltext');
+			toggleButtonText = this.querySelector('.text');
+
+			// change attributes and text if full text is shown/hidden
+			if (!fullTextWrapper.hasAttribute('hidden')) {
+				toggleButtonText.innerText = 'Show More';
+				fullTextWrapper.setAttribute('hidden', true);
+				toggleButton.setAttribute('aria-expanded', false);
+			} else {
+				toggleButtonText.innerText = 'Show Less';
+				fullTextWrapper.removeAttribute('hidden');
+				toggleButton.setAttribute('aria-expanded', true);
+			}
+		});
+	});
+}</script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">ABD Productions</a>
+<nav class="navbar navbar-expand-lg navbar-light navbar-text bg-light"> <a class="navbar-brand" href="#">ABD Productions</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent1">
     <ul id="navlist" class="navbar-nav ml-auto">
@@ -86,10 +128,11 @@
 
   </div>
 </nav>
-<nav class="navbar">
+<nav class="navbar nav "
+  id="sublist"><div class="container">
 	<ul
-  id="sublist"
-  class="nav nav-tabs navbar-nav ml-auto"
+
+  class="nav-tabs navbar-nav"
   role="tablist">
   <li class="nav-item">
     <a
@@ -105,10 +148,10 @@
   <li class="nav-item">
     <a
       class="nav-link"
-      href="#news"
+      href="#history"
       data-toggle="tab"
       aria-controls="news">
-      News
+      History
     </a>
   </li>
 
@@ -122,7 +165,7 @@
     </a>
   </li>
 </ul>
-</nav>
+</div></nav>
 
 
 
@@ -132,250 +175,23 @@
   <div
     id="home"
     class="tab-pane fade show active" >
-    <div>
-      <h4>The vision of Skywatchers is…</h4>
-
-      <div
-        id="accordion"
-        class="accordion md-accordion"
-        role="tablist"
-        aria-multiselectable="true">
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne1"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne1"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-expanded="true"
-              aria-controls="collapseOne1">
-              <h5 class="mb-0">
-                a. Collaborative
-
-                <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne1"
-            class="collapse"
-            role="tabpanel"
-            aria-labelledby="headingOne1"
-            data-parent="#accordion">
-            <div class="card-body">
-              ABD artists collaborate with resident co-creators on projects that range from
-              performances to exhibitions, and from community dialogues to urban garden projects.
-              All are creative celebrations of the lives, environment, stories, and urgent concerns
-              of Skywatcher participants.
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne2"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne2"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-expanded="false"
-              aria-controls="collapseOne2">
-              <h5 class="mb-0">
-                b. Resident-Centered
-
-                <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne2"
-            class="collapse "
-            role="tabpanel"
-            aria-labelledby="headingOne2"
-            data-parent="#accordion">
-            <div class="card-body">
-              The Skywatchers process is “of, by, and for” the residents of the Tenderloin.
-              Residents become storytellers, co-creators, performers, and audience members on a
-              creative platform of their own making.
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne3"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne3"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-controls="collapseOne3">
-              <h5 class="mb-0">
-                c. Change-Making
-
-                <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne3"
-            class="collapse"
-            role="tabpanel"
-            aria-labelledby="headingOne3"
-            data-parent="#accordion">
-            <div class="card-body">
-              We bridge community-engaged art with celebratory art in the service of social change.
-              By building community, nurturing self-efficacy, and cultivating access to personal and
-              creative resources, Skywatchers supports participants in becoming effective agents for
-              change in our own lives. Through the Skywatchers Leadership training beginning in
-              August 2017, residents will have opportunities to take on leadership positions within
-              the program.
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne4"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne4"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-controls="collapseOne4">
-              <h5 class="mb-0">
-                d. Community Building
-
-                <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne4"
-            class="collapse"
-            role="tabpanel"
-            aria-labelledby="headingOne4"
-            data-parent="#accordion">
-            <div class="card-body">
-              A program of ABD Productions, Skywatchers partners with Community Housing Partnership
-              (CHP), CORE (a CHP leadership and advocacy group), Luggage Store Gallery (LSG), Larkin
-              Street Youth Services (LSYS), Tenderloin Museum (TM), Glide Memorial Church, Faithful
-              Fools Ministry, CounterPulse, and other Tenderloin organizations. Through these
-              partnerships we are able to share resources and build effective alliances for change.
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne5"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne5"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-controls="collapseOne5">
-              <h5 class="mb-0">
-                e. Connective
-
-                <i class="fa "  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne5"
-            class="collapse"
-            role="tabpanel"
-            aria-labelledby="headingOne5"
-            data-parent="#accordion">
-            <div class="card-body"></div>
-          </div>
-        </div>
-
-        <!-- Accordion card -->
-
-        <div class="card">
-          <!-- Card header -->
-
-          <div
-            id="headingOne6"
-            class="card-header"
-            role="tab">
-            <a class="collapsed"
-              href="#collapseOne6"
-              data-toggle="collapse"
-              data-parent="#accordion"
-              aria-controls="collapseOne6">
-              <h5 class="mb-0">f. Transformative<i class="fa fa-plus"></i></h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-
-          <div
-            id="collapseOne6"
-            class="collapse"
-            role="tabpanel"
-            aria-labelledby="headingOne6"
-            data-parent="#accordion">
-            <div class="card-body">
-              The transformative impact of sharing one’s own story—both to be heard and to see that
-              story in a broader social context—creates the space for participating residents to
-              imagine and manifest change.
-            </div>
-          </div>
-        </div>
-      </div>
+    <DIV ><P ID="HOME-CONTENT">Founded in 2011, Skywatchers brings residents of San Francisco’s Tenderloin District into partnership with professional artists to create multi-disciplinary, site-specific performance installations that amplify the rich and complex stories, life experiences, and talents of community members. Skywatchers is structured on the belief that relationships are the first site of social change. We believe that large-scale transformation begins with intimate, interpersonal exchange and that all stakeholders are transformed in this process—artists, resident participants, as well as site staff.</P>
+      <div id="more-1" class="fulltext">
+      <P>Skywatchers is committed to justice and equity as a critique of the current societal structures that marginalize large segments of the population. Creative expression and artistry are the foundation of a unique set of methodological practices to resist, confront, expose, or intervene in those structures, working towards social change on the individual and systemic levels. We believe in the power of art and collective creative endeavors to transform lives, embody our interconnectedness, and infuse our lives with agency, possibility, and increased vitality.</P>
     </div>
+<button aria-expanded="false" aria-controls="more-1" class="toggle-content" hidden><span class="text">Show More</span> <span class="visually-hidden">about Headline</span></button>
+
 	</div>
 
     <div
-      id="news"
+      id="history"
       class="tab-pane fade ">
-      <div class="container">Yup.. theres  news..  things are a-happening</div>
+      <div class="container">
+        <p id="shistory1">Skywatchers was conceived by Anne Bluethenthal in 2011 when she visited the Tenderloin National Forest (TNF) to explore the possibility of a site-specific work.  The Forest, surrounded by multi-story residential buildings and single room occupancy hotels (SROs), is one of the very few open spaces in this high-density neighborhood. As Bluethenthal continued to visit the Forest over a few months, she grew interested in creating a work there in collaboration with residents of the Senator Hotel. This is where it starts.</p>
+
+        <p id="shistory2">The history of Skywatchers is one of learning by listening; the work we make both informs and is informed by that learning process. The organizational and creative history of Skywatchers over the last eight years can be described by several advances, both in scale, scope, and intention. We are now a multi-site program with emerging resident leadership. Along the way the work has become more multi-disciplinary, and we have become more strategic in positioning the work—and resident voices—in the public arena to effect change. As resident engagement in the ensemble has deepened, their integration with professionally trained artists has become more seamless.</p>
     </div>
+  </div>
 
 
     <div
@@ -391,7 +207,7 @@
                   <a href="#popin1">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?1"/>
+                      src="./img/01.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -405,7 +221,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?1"/>
+                        src="./img/01.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -416,7 +232,7 @@
                   <a href="#popin2">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?2"/>
+                      src="./img/02.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -430,7 +246,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?2"/>
+                        src="./img/02.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -441,7 +257,7 @@
                   <a href="#popin3">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?3"/>
+                      src="./img/03.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -455,7 +271,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?3"/>
+                        src="./img/03.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -466,7 +282,7 @@
                   <a href="#popin4">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?4"/>
+                      src="./img/04.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -480,7 +296,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?4"/>
+                        src="./img/04.jpg" />
                     </div>
                   </a>
                 </div>
@@ -491,7 +307,7 @@
                   <a href="#popin5">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?5"/>
+                      src="./img/05.jpg" />
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -505,7 +321,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?5"/>
+                        src="./img/05.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -516,7 +332,7 @@
                   <a href="#popin6">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?6"/>
+                      src="./img/06.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -530,7 +346,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?6"/>
+                        src="./img/06.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -541,7 +357,7 @@
                   <a href="#popin7">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?7"/>
+                      src="./img/07.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -555,7 +371,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?7"/>
+                        src="./img/07.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -566,7 +382,7 @@
                   <a href="#popin8">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?8"/>
+                      src="./img/08.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -580,7 +396,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?8"/>
+                        src="./img/08.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -591,7 +407,7 @@
                   <a href="#popin9">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?9"/>
+                      src="./img/09.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -605,7 +421,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?9"/>
+                        src="./img/09.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -616,7 +432,7 @@
                   <a href="#popin10">
                     <img
                       alt
-                      src="http://lorempixel.com/400/400/?10"/>
+                      src="./img/10.jpg"/>
                     <div class="text">description lorim</div>
                   </a>
                 </div>
@@ -630,132 +446,7 @@
                     <div class="imgBox">
                       <img
                         alt
-                        src="http://lorempixel.com/400/400/?10"/>
-                    </div>
-                  </a>
-                </div>
-              </li>
-
-              <li id="image11">
-                <div class="mosaicItem">
-                  <a href="#popin11">
-                    <img
-                      alt
-                      src="http://lorempixel.com/400/400/?11"/>
-                    <div class="text">description lorim</div>
-                  </a>
-                </div>
-
-                <div
-                  id="popin11"
-                  class="popin">
-                  <a href="#image11">
-                    <div class="overlay"></div>
-
-                    <div class="imgBox">
-                      <img
-                        alt
-                        src="http://lorempixel.com/400/400/?11"/>
-                    </div>
-                  </a>
-                </div>
-              </li>
-
-              <li id="image12">
-                <div class="mosaicItem">
-                  <a href="#popin12">
-                    <img
-                      alt
-                      src="http://lorempixel.com/400/400/?12"/>
-                    <div class="text">description lorim</div>
-                  </a>
-                </div>
-
-                <div
-                  id="popin12"
-                  class="popin">
-                  <a href="#image12">
-                    <div class="overlay"></div>
-
-                    <div class="imgBox">
-                      <img
-                        alt
-                        src="http://lorempixel.com/400/400/?12"/>
-                    </div>
-                  </a>
-                </div>
-              </li>
-
-              <li id="image13">
-                <div class="mosaicItem">
-                  <a href="#popin13">
-                    <img
-                      alt
-                      src="http://lorempixel.com/400/400/?13"/>
-                    <div class="text">description lorim</div>
-                  </a>
-                </div>
-
-                <div
-                  id="popin13"
-                  class="popin">
-                  <a href="#image13">
-                    <div class="overlay"></div>
-
-                    <div class="imgBox">
-                      <img
-                        alt
-                        src="http://lorempixel.com/400/400/?13"/>
-                    </div>
-                  </a>
-                </div>
-              </li>
-
-              <li id="image14">
-                <div class="mosaicItem">
-                  <a href="#popin14">
-                    <img
-                      alt
-                      src="http://lorempixel.com/400/400/?14"/>
-                    <div class="text">description lorim</div>
-                  </a>
-                </div>
-
-                <div
-                  id="popin14"
-                  class="popin">
-                  <a href="#image14">
-                    <div class="overlay"></div>
-
-                    <div class="imgBox">
-                      <img
-                        alt
-                        src="http://lorempixel.com/400/400/?14"/>
-                    </div>
-                  </a>
-                </div>
-              </li>
-
-              <li id="image15">
-                <div class="mosaicItem">
-                  <a href="#popin15">
-                    <img
-                      alt
-                      src="http://lorempixel.com/400/400/?15"/>
-                    <div class="text">description lorim</div>
-                  </a>
-                </div>
-
-                <div
-                  id="popin15"
-                  class="popin">
-                  <a href="#image15">
-                    <div class="overlay"></div>
-
-                    <div class="imgBox">
-                      <img
-                        alt
-                        src="http://lorempixel.com/400/400/?15"/>
+                        src="./img/10.jpg"/>
                     </div>
                   </a>
                 </div>
@@ -770,7 +461,7 @@
   <ul><li>A great show on Oct 31st</li><li>Another great show on Dec 31st</li></ul>
 </div>
 
-</body>
+</div></body>
 
 <!--
   div class="btn-toolbar" role="toolbar">     <div class="btn-group mr-2" role="group">
@@ -782,3 +473,241 @@
   aria-controls="#content3">Gallery</button>        </div>   </div
 -->
 </html>
+<div>
+  <h4>The vision of Skywatchers is…</h4>
+
+  <div
+    id="accordion"
+    class="accordion md-accordion"
+    role="tablist"
+    aria-multiselectable="true">
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne1"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne1"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-expanded="true"
+          aria-controls="collapseOne1">
+          <h5 class="mb-0">
+            a. Collaborative
+
+            <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne1"
+        class="collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne1"
+        data-parent="#accordion">
+        <div class="card-body">
+          ABD artists collaborate with resident co-creators on projects that range from
+          performances to exhibitions, and from community dialogues to urban garden projects.
+          All are creative celebrations of the lives, environment, stories, and urgent concerns
+          of Skywatcher participants.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne2"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne2"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-expanded="false"
+          aria-controls="collapseOne2">
+          <h5 class="mb-0">
+            b. Resident-Centered
+
+            <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne2"
+        class="collapse "
+        role="tabpanel"
+        aria-labelledby="headingOne2"
+        data-parent="#accordion">
+        <div class="card-body">
+          The Skywatchers process is “of, by, and for” the residents of the Tenderloin.
+          Residents become storytellers, co-creators, performers, and audience members on a
+          creative platform of their own making.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne3"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne3"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-controls="collapseOne3">
+          <h5 class="mb-0">
+            c. Change-Making
+
+            <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne3"
+        class="collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne3"
+        data-parent="#accordion">
+        <div class="card-body">
+          We bridge community-engaged art with celebratory art in the service of social change.
+          By building community, nurturing self-efficacy, and cultivating access to personal and
+          creative resources, Skywatchers supports participants in becoming effective agents for
+          change in our own lives. Through the Skywatchers Leadership training beginning in
+          August 2017, residents will have opportunities to take on leadership positions within
+          the program.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne4"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne4"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-controls="collapseOne4">
+          <h5 class="mb-0">
+            d. Community Building
+
+            <i class="fa"  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne4"
+        class="collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne4"
+        data-parent="#accordion">
+        <div class="card-body">
+          A program of ABD Productions, Skywatchers partners with Community Housing Partnership
+          (CHP), CORE (a CHP leadership and advocacy group), Luggage Store Gallery (LSG), Larkin
+          Street Youth Services (LSYS), Tenderloin Museum (TM), Glide Memorial Church, Faithful
+          Fools Ministry, CounterPulse, and other Tenderloin organizations. Through these
+          partnerships we are able to share resources and build effective alliances for change.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne5"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne5"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-controls="collapseOne5">
+          <h5 class="mb-0">
+            e. Connective
+
+            <i class="fa "  aria-hidden="true"><!-- s fa-angle-down rotate-icon" --></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne5"
+        class="collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne5"
+        data-parent="#accordion">
+        <div class="card-body"></div>
+      </div>
+    </div>
+
+    <!-- Accordion card -->
+
+    <div class="card">
+      <!-- Card header -->
+
+      <div
+        id="headingOne6"
+        class="card-header"
+        role="tab">
+        <a class="collapsed"
+          href="#collapseOne6"
+          data-toggle="collapse"
+          data-parent="#accordion"
+          aria-controls="collapseOne6">
+          <h5 class="mb-0">f. Transformative<i class="fa fa-plus"></i></h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+
+      <div
+        id="collapseOne6"
+        class="collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne6"
+        data-parent="#accordion">
+        <div class="card-body">
+          The transformative impact of sharing one’s own story—both to be heard and to see that
+          story in a broader social context—creates the space for participating residents to
+          imagine and manifest change.
+        </div>
+      </div>
+    </div>
+  </div>
+>
+</div>

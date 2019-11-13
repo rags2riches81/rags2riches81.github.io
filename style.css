@@ -1,0 +1,50 @@
+/**
+ * Mailchimp form
+ *
+ * @author Marc Oliveras Galvez <oligalma@gmail.com> 
+ * @link http://www.oligalma.com
+ * @copyright 2016 Oligalma
+ * @license GPL
+ */
+
+#subscribe-div
+{
+    max-width:19rem;
+   
+    border-radius:5px;
+   
+   
+   
+}
+
+#subscribe-submit
+{
+    padding:.125rem .75rem;
+}
+
+.subscribe-label
+{
+    font-weight:bold;
+}
+
+.subscribe-green
+{
+    color:lime;
+}
+
+.subscribe-red
+{
+    color:red;
+}
+    
+#subscribe-message
+{
+    margin-bottom:10px;
+    font-weight:bold;   
+}   
+      
+#subscribe-email, #subscribe-first-name, #subscribe-last-name
+{
+    margin-bottom:10px;
+    width:85%;
+} 

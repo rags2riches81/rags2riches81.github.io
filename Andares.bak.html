@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ANDARES| ABD Productions</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<link
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		rel="stylesheet">
+<link
+		href="node_modules/custom/css/custom.css"
+		rel="stylesheet"
+		type="text/css">
+<link
+		href="node_modules/custom/css/theme.css"
+		rel="stylesheet"
+		type="text/css">
+
+	<!-- <link href="node_modules/custom/css/custom2.css" rel="stylesheet" type="text/css"> -->
+
+<link
+		href="node_modules/custom/css/hnav.css"
+		rel="stylesheet"
+		type="text/css">
+<link
+		href="node_modules/custom/css/photo.css"
+		rel="stylesheet"
+		type="text/css">
+
+
+	<!--
+  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
+  web page. We recommend that you do not modify it.
+-->
+
+<script>var __adobewebfontsappname__ = "dreamweaver"</script>
+<script
+		src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3,n7:default.js"
+		type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!--script>
+  $(document).ready(function(){         // Add minus icon for collapse element which is open by
+  default         $(".collapse.show").each(function(){
+  $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");         });
+  // Toggle plus minus icon on show hide of collapse element
+  $(".collapse").on('show.bs.collapse', function(){
+  $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+  }).on('hide.bs.collapse', function(){
+  $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");         });
+  });
+</script-->
+<script>
+if ('querySelector' in document &&
+    'addEventListener' in window) {
+
+    var toggleButtons = document.querySelectorAll('.toggle-content');
+    var fullTextWrappers = document.querySelectorAll('.fulltext');
+    var fullText;
+    var toggleButtonText;
+
+
+    [].forEach.call(fullTextWrappers, function (fullTextWrapper) {
+        // hide all full text on load
+        fullTextWrapper.setAttribute('hidden', true);
+    });
+
+    [].forEach.call(toggleButtons, function (toggleButton) {
+        // show toggle more buttons
+        toggleButton.removeAttribute('hidden');
+
+        // add listener for each button
+        toggleButton.addEventListener('click', function () {
+
+            fullTextWrapper = this.parentElement.querySelector('.fulltext');
+            toggleButtonText = this.querySelector('.text');
+
+            // change attributes and text if full text is shown/hidden
+            if (!fullTextWrapper.hasAttribute('hidden')) {
+                toggleButtonText.innerText = 'Show More';
+                fullTextWrapper.setAttribute('hidden', true);
+                toggleButton.setAttribute('aria-expanded', false);
+            } else {
+                toggleButtonText.innerText = 'Show Less';
+                fullTextWrapper.removeAttribute('hidden');
+                toggleButton.setAttribute('aria-expanded', true);
+            }
+        });
+    });
+}</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light navbar-text bg-light"> <a class="navbar-brand"
+                                                                           href="#">ABD Productions</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul id="navlist" class="navbar-nav ml-auto">
+      <li class="nav-item"> <a class="nav-link " href="#home" id="navbarDropdown1"> SKYWATCHERS </a> </li>
+      <li class="nav-item "> <a class="nav-link" href="./Andares.html"> ANDARES </a> </li>
+      <li><a class="nav-link" href="#item-3">HISTORY</a></li>
+      <li><a class="nav-link" href="#item-3">CONTACT</a></li>
+      <li class="donate"><a class="nav-link donate-a" href="#item-3">DONATE</a></li>
+    </ul>
+  </div>
+</nav>
+<nav class="navbar nav "
+     id="sublist">
+  <div class="mcontainer ">
+    <ul
+		    class="nav-tabs navbar-nav mr-auto"
+		    role="tablist">
+           <li class="nav-item"> <a href="#about"
+                                    class="nav-link" data-toggle="tab"
+                                    aria-controls=""
+                                    aria-expanded="true">About</a></li>
+           <li class="nav-item"> <a href="#phases"
+                                    class="nav-link" data-toggle="tab"
+                                    aria-controls=""
+                                    aria-expanded="true">Phases</a></li>
+           <li class="nav-item"> <a href="#"
+                                    class="nav-link" data-toggle="tab"
+                                    aria-controls=""
+                                    aria-expanded="true"></a></li>     
+</ul>
+  </div>
+</nav>
+<div class="container ml-auto mr-auto">
+  <div
+		  id="tabContent"
+		  class="tab-content ">
+    <div
+		    id="About"
+		    class="tab-pane fade show active">
+	    <h4>About ANDARES</h4>
+<p>ANDARES emerged in 2014 from an investigation into forgiveness, the personal, bodily, and geo-political dimensions
+         of it. During Anne Bluethenthal’s research, cultural geographer Luz Mena began to share stories from her
+   birthplace, El Salvador. The country—still reeling from the brutal years of civil war in the 80’s—was seeing a
+   nascent historical memory movement, lifting more than 30 years of silence around the thousands of disappeared citizens, and the countless crimes against humanity—which were sanctioned and supported in part by the US government. Bluethenthal and Mena went together to El Salvador, intending to talk with survivors in person and explore any potential project that may emerge.</p>
+<p>During this first exploratory trip to San Salvador, Bluethenthal and Mena met the 6 extraordinary
+        individuals—artists, activists, survivors—that would become the co-creators of ANDARES: Godofredo Echeverría,
+   Roberto Gómez, Mauricio López Guillén, Patricia Morales, René Muñoz, Ennio Antonio Sol Guerrero.</p>
+
+      </div>
+    <div
+		    id="phases"
+		    class="tab-pane fade ">
+	    <div id="phaseContainer">
+	    <div class="phase" id="phase1"><h4>PHASE ONE: ANDARES, San Francisco</h4>
+<p>In 2014-15 Bluethenthal and Mena returned 4 times, part of a deepening process of storytelling and art-making. The
+    aim was to create a performance work grounded in the stories of these 6 collaborators, and formed around the
+   music composed by the musicians among them. Presented by the SF International Arts Festival, ABD brought all 6
+   co-creators to San Francisco in May 2015 for a weekend of performances with ABD dancers, actors, and designers. This was the first time these stories had been spoken publicly.</p>
+<p>Participating artists: Anne Bluethenthal, Nick Brentley, Roxana Damas, Rama Mahesh Hall, Noah James, Andreina
+               Maldonado, Malena Mayorga, Luz Mena, Ricky Saenz, Frances Sedayao, Keisha Turner, Malena Mayorga,
+   Adele Prandini, Cassandra Carpenter, Victor Cartagena, Deirdre Visser, Alejandro Acosta, Allen Wilner]</p>
+
+    </div>
+	  <div class="phase" id="phase2">
+		  <h4>PHASE TWO: ANDARES, El Salvador</h4>
+Their dream was always to take ANDARES to El Salvador.
+		  <blockquote>On that stage was a live historical map of our revolution. (audience member)</blockquote>
+<p>In June 2016, Mena and Bluethenthal met with Silvia Elena Regalado, the Secretaría de Cultura de la Presidencia of
+    El Salvador, to propose the project. To their great honor and delight, she invited them to set the piece on the
+   National Dance Company of ES, presenting the work in 2017 in the National Theater of El Salvador. Over the next 9
+   months Anne and Luz held 5 residencies in San Salvador, auditioned and hired local actors and musicians, designers and documentarians, re-translated the work back to its original Spanish language, and re-choreographed it for the ensemble of 12 dancers. In March 2017, the work premiered in San Salvador’s Teatro Nacionál to four overflowing audiences.</p>
+	  </div>
+	  <div class="phase" id="phase3">
+		  
+
+</div>
+    <div
+		    id="tab3"
+		    class="tab-pane fade ">
+<!-- Tab 3 -->
+</div>
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+    <ul>
+      <li>A great show on Oct 31st</li>
+      <li>Another great show on Dec 31st</li>
+    </ul>	  
+  </div>
+</div></div></div></div></body>
+</html>
+
+
+

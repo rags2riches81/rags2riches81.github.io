@@ -1,156 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html><!-- InstanceBegin template="/Templates/site templ.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<!-- todo: get pictures from Deirdre to intersperse
+ through skywatchers text. -->
 <meta charset="utf-8">
-<title>About | ABD Productions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>About ABD | ABD Productions</title>
+<!-- InstanceEndEditable -->
+<link
+  href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+  rel="stylesheet">
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet">
+<link rel="stylesheet" href="node_modules/custom/css/ideal-image-slider.css">
 
-	<!--link
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous" -->
-<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<link href="node_modules/custom/css/iis-thumb-nav.css"
+  rel="stylesheet">
 <link
-		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		rel="stylesheet">
-<link
-		href="node_modules/custom/css/custom.css"
-		rel="stylesheet"
-		type="text/css">
-<link
-		href="node_modules/custom/css/theme.css"
-		rel="stylesheet"
-		type="text/css">
-
-	<!-- <link href="node_modules/custom/css/custom2.css" rel="stylesheet" type="text/css"> -->
+  href="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/themes/default/default.css"
+  rel="stylesheet">
 
 <link
-		href="node_modules/custom/css/hnav.css"
-		rel="stylesheet"
-		type="text/css">
+  href="node_modules/custom/css/theme.css"
+  rel="stylesheet"
+  type="text/css">
 <link
-		href="node_modules/custom/css/photo.css"
-		rel="stylesheet"
-		type="text/css">
+  href="node_modules/custom/css/custom.css"
+  rel="stylesheet"
+  type="text/css">
+<link
+  href="node_modules/custom/css/flexnav.css"
+  rel="stylesheet"
+  type="text/css">
 
 
-	<!--
-	The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
-	web page. We recommend that you do not modify it.
-  -->
-
-<script>var __adobewebfontsappname__ = "dreamweaver"</script>
-<script
-		src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3:default.js"
-		type="text/javascript">
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-<script>var __adobewebfontsappname__ = "dreamweaver"</script>
-  <script src="http://use.edgefonts.net/droid-sans:n4:default.js" type="text/javascript"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"><!-- integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"--></script>
+<script src="node_modules/vendor/babel-polyfill-6.26.0.min.js"></script>
+
+	
 <script>
-if ('querySelector' in document &&
-    'addEventListener' in window) {
+  if ('querySelector' in document && 'addEventListener' in window) {  var toggleButtons =
+  document.querySelectorAll('.toggle-content'); var fullTextWrappers =
+  document.querySelectorAll('.fulltext'); var fullText; var toggleButtonText;
+  [].forEach.call(fullTextWrappers, function(fullTextWrapper) { // hide all full text on load
+  fullTextWrapper.setAttribute('hidden', true); });  [].forEach.call(toggleButtons,
+  function(toggleButton) { // show toggle more buttons toggleButton.removeAttribute('hidden');  //
+  add listener for each button toggleButton.addEventListener('click', function () {  fullTextWrapper
+  = this.parentElement.querySelector('.fulltext'); toggleButtonText = this.querySelector('.text');
+  // change attributes and text if full text is shown/hidden if
+  (!fullTextWrapper.hasAttribute('hidden')) { toggleButtonText.innerText = 'Show More';
+  fullTextWrapper.setAttribute('hidden', true); toggleButton.setAttribute('aria-expanded', false); }
+  else { toggleButtonText.innerText = 'Show Less'; fullTextWrapper.removeAttribute('hidden');
+  toggleButton.setAttribute('aria-expanded', true); } }); }); }
+</script>
 
-    var toggleButtons = document.querySelectorAll('.toggle-content');
-    var fullTextWrappers = document.querySelectorAll('.fulltext');
-    var fullText;
-    var toggleButtonText;
-
-
-    [].forEach.call(fullTextWrappers, function(fullTextWrapper) {
-        // hide all full text on load
-        fullTextWrapper.setAttribute('hidden', true);
-    });
-
-    [].forEach.call(toggleButtons, function(toggleButton) {
-        // show toggle more buttons
-        toggleButton.removeAttribute('hidden');
-
-        // add listener for each button
-        toggleButton.addEventListener('click', function () {
-
-            fullTextWrapper = this.parentElement.querySelector('.fulltext');
-            toggleButtonText = this.querySelector('.text');
-
-            // change attributes and text if full text is shown/hidden
-            if (!fullTextWrapper.hasAttribute('hidden')) {
-                toggleButtonText.innerText = 'Show More';
-                fullTextWrapper.setAttribute('hidden', true);
-                toggleButton.setAttribute('aria-expanded', false);
-            } else {
-                toggleButtonText.innerText = 'Show Less';
-                fullTextWrapper.removeAttribute('hidden');
-                toggleButton.setAttribute('aria-expanded', true);
-            }
-        });
-    });
-}</script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="Panel2" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel3 - Gallery" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel2Title" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel3Title" type="boolean" value="true" -->
 </head>
- <body>
-<nav class="navbar navbar-expand-lg navbar-light navbar-text bg-light"> <a class="navbar-brand mr-auto" href="#">ABD Productions</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-    <ul id="navlist" class="navbar-nav ml-auto">
-      <li class="nav-item"> <a class="nav-link " href="#home" id="navbarDropdown1"> SKYWATCHERS </a> </li>
-      <li class="nav-item "> <a class="nav-link" href="./Andares.html" > ANDARES </a> </li>
-      <li ><a class="nav-link" href="#item-3">History</a></li>
-      <li ><a  class="nav-link" ahref="#item-3">Community </a></li>
-      <li><a class="nav-link" href="#item-3">Contact</a></li>
-      <li class="donate"><a class="nav-link donate-a" href="#item-3">Donate</a></li>
-    </ul>
-  </div>
-</nav>
-<div id="sublist">
-	<nav class="navbar nav "
-	>
-  <div class="mcontainer " >
-    <ul
-		    class="nav-tabs navbar-nav mr-auto"		    role="tablist">
-      <li class="nav-item"> <a
-		      class="nav-link"
-		      href="#home"
-		      data-toggle="tab"
-		      aria-controls="home"
-		      aria-expanded="true"> Home </a> </li>
-      <li class="nav-item"> <a
-		      class="nav-link"
-		      href="#history"
-		      data-toggle="tab"
-		      aria-controls="news"> History </a> </li>
-      <li class="nav-item"> <a
-		      class="nav-link"
-		      href="#gallery"
-		      data-toggle="tab"
-		      aria-controls="AnneProfile"> About Anne </a> </li>
-    </ul>
-  </div>
-	</nav></div>
-<div class="container ml-auto mr-auto container-bg">
-  <div
-		  id="tabContent"
-		  class="tab-content ">
-    <div
-		    id="home"
-		    class="tab-pane fade show active">
-      <h3>About ABD</h3>
-	    <h4>Mission Statement</h4>
-	    ABD Productions is a multicultural organization that inspires social change and awakens our collective humanity through the arts. The company identifies and promotes ways art can foster social equality, economic parity, and access to creative resources both locally and globally. Using art as a catalyst and common language, ABD strives to engage artists, co-creators, and non-traditional audiences in San Francisco, reflecting narratives too often invisible in our collective cultural production.
-    </div>
-    <div
-		    id="history"
-		    class="tab-pane fade ">
+<body>
 
-	      <!-- todo: paste in history information about ABD -->
-	     <div id="less-1" >
-		     <h4>History of ABD</h4>
-	    ABD Founder and Artistic Director Anne Bluethenthal has been a pioneer in socially engaged art for over three decades. She has built a repertoire at once deceptively subversive and deeply rooted in a feminist, anti-colonial, and anti-patriarchal methodology. Raised in the south from a lineage of civil rights activists, Anne fused her social conscience with a lifelong study of liberatory somatic practices to create a feminist approach to dance that undermines traditional dance conventions.  While creating over 200 performance works, Anne has been a mentor and educator to hundreds of young artists.
-(MORE) <div class="fulltext" id="more-1"> <p>Political and psycho-physical, her methodology and choreographic vision
-                                                     have been enormously influential on at least two generations of
-                                             SF dancers. She modeled a way of metabolizing outrage through the arts,
-                                             responding to injustice and inspiring action through a process of creating work predicated on non-harm to the artist-activist.</p>
+<!--Use current selector to indicate which page is being viewed on nav bar."-->
+<div class="topnav">
+<ul
+  id="navlist"
+  class="flexnav  medrow" role="navigation" >
+
+<li class="logo"><a href="index.html">ABD Productions</a></li>
+
+ <!--<li class="flexspace">&nbsp;</li>-->
+ <li class="toggle"><a href="#"><i class="fa fa-bars"></i></a></li>
+  <li class="item">
+    <a
+      class="nav-link "
+      href="skywatchers.html">
+      SKYWATCHERS
+    </a>
+  </li>
+
+  <li class="item">
+    <a
+      class="nav-link"
+      href="Andares.html">
+      ANDARES
+    </a>
+	</li>
+
+
+  <li class="item">
+    <a
+      class="nav-link"
+      href="about.html">
+      ABOUT
+    </a>
+  </li>
+
+  <li class="item ">
+    <a
+      class="nav-link"
+      href="contact.html">
+      CONTACT
+    </a>
+  </li>
+
+  <li class="donate item">
+    <a
+      class="nav-link donate-a"
+      href="donate.html">
+      DONATE
+    </a>
+  </li>
+  </ul>
+ <!--div class=" mcontainer mr-auto ml-auto"-->
+<ul
+  id="sublist"
+     class=" nav nav-tabs mr-auto ml-auto" role="tablist"
+   >
+      <li class="nav-item"><!-- InstanceBeginEditable name="Panel1Title" -->
+        <a
+          class="nav-link"
+          href="#home"
+		  id="nav-home-tab"
+
+          aria-controls="home"
+          aria-selected="true"> Mission </a>
+      <!-- InstanceEndEditable --></li>
+
+      <li class="nav-item"><!-- InstanceBeginEditable name="EditRegion7" -->
+      <a
+          class="nav-link"
+		  id="nav-history-tab"
+		  href="#history"
+
+          aria-controls="history"
+		 aria-selected="false">History of ABD </a>
+      <!-- InstanceEndEditable --></li>
+
+      <li class="nav-item"><!-- InstanceBeginEditable name="EditRegion8" -->
+      <a
+  		  id="nav-anne-tab"
+		  class="nav-link"
+          href="#Anne"
+     
+          aria-controls="Anne"
+		 aria-selected="false"> About Anne </a>
+      <!-- InstanceEndEditable --></li>
+    </ul>
+   <!--/div-->
+</div>
+
+
+<div class="container container-bg container-main ml-auto mr-auto">
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+
+    <!--ul>
+      <li--><a href="#firstEvent" class="nav-link" data-toggle="modal" data-backdrop="true">
+Came Here to Live<p class="blabel"> Resilience and Resistance in the Containment Zone</p>
+</a><!--/li>
+    
+    </ul-->
+  </div>
+
+  <div
+    id="tabContent"
+    class="tab-content"><!-- InstanceBeginEditable name="Panel 1" -->
+    <div
+      id="home"
+      class="tab-pane fade show active"
+	  role="tabpanel" aria-labelledby="nav-home-tab">
+      
+        <h3>About ABD</h3>
+	    <h4><u>Mission Statement</u></h4>
+	    <p>ABD Productions is a multicultural organization that inspires social change and awakens our collective
+	         humanity through the arts. The company identifies and promotes ways art can foster social equality,
+	       economic parity, and access to creative resources both locally and globally. Using art as a catalyst and
+	       common language, ABD strives to engage artists, co-creators, and non-traditional audiences in San Francisco, reflecting narratives too often invisible in our collective cultural production.</p>
+        
+      
+    </div>
+  <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion4" -->
+  <div
+      id="history"
+      class="tab-pane fade show active">
+    <div>
+       
+		     <h3>History of ABD</h3>
+	    <p>ABD Founder and Artistic Director Anne Bluethenthal has been a pioneer in socially engaged art for over
+	         three decades. She has built a repertoire at once deceptively subversive and deeply rooted in a
+	       feminist, anti-colonial, and anti-patriarchal methodology. Raised in the south from a lineage of civil
+	       rights activists, Anne fused her social conscience with a lifelong study of liberatory somatic practices to create a feminist approach to dance that undermines traditional dance conventions.  While creating over 200 performance works, Anne has been a mentor and educator to hundreds of young artists.</p>
+(MORE) 
+		<div class="fulltext" id="more-1"> <a
+            class="more"
+            href="#more-1"> Show more </a> <p>Political and psycho-physical, her methodology and choreographic vision have been enormously influential on at least two generations of SF dancers. She modeled a way of metabolizing outrage through the arts, responding to injustice and inspiring action through a process of creating work predicated on non-harm to the artist-activist.</p>
 <p>Bluethenthal’s pivotal work in social engagement through performance began in her early politically- motivated
              dances, continues in the ongoing collaborative work in El Salvador, and reaches a deep level of clarity
        with Skywatchers, where her philosophy of art-making ‘of, by and for’ the people has been most fully realized
@@ -158,24 +208,72 @@ if ('querySelector' in document &&
     </div>
 
         </div>
-    <div
-		    id="AnneProfile"
-		    class="tab-pane fade">
-      <!-- todo: paste in Anne's profile. (new picture of Anne for the profile?-->
-<h4>Anne Bluethenthal</h4>
-      Founder and Artistic Director of ABD Productions, Anne Bluethenthal bridges the worlds of
+    </div>
+  
+  <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion5" -->
+  <div
+      id="Anne"
+      class="tab-pane fade show active"
+	  >
+<h3>Anne Bluethenthal</h3>
+      <p>Founder and Artistic Director of ABD Productions, Anne Bluethenthal bridges the worlds of
       formal concert dance and community-engaged art. She has received awards and recognition from Curve Magazine,
       the SF Chronicle’s Best of the Year, SF Weekly’s Black Box, the SF Bay Guardian’s Goldie Award for Achievement
       in Dance, and the Rhinette Award for Best Choreography. Her work has been presented nationally and
       internationally and is funded by the City of San Francisco, the California Arts Council, the NEA, and numerous
-      foundations.
-      </div>
-      <div class="rpanel">
-    <div class="rpanelh">Join us for:</div>
-    <ul>
-      <li>A great show on Oct 31st</li>
-      <li>Another great show on Dec 31st</li>
-    </ul>	  
+         foundations.</p>
   </div>
-    </div></div></div></div></body>
-</html>
+  <!-- InstanceEndEditable --></div>
+</div>
+
+<script src="js/ideal-image-slider.js"></script>
+<script src="js/iis-captions.js"></script>
+<script src="js/iis-bullets.js"></script>
+<script src="js/iis-thumb-nav.js"></script>
+
+<script>
+  var slider = new IdealImageSlider.Slider('#slider2');   slider.addCaptions();
+  slider.addThumbNav();   slider.start();
+</script>
+
+<script>
+  jQuery(document).ready(function ($) {             let selectedTab = window.location.hash;
+  $('.nav-link[href="' + selectedTab + '"]' ).trigger('click');         })
+</script>
+	<div class="modal fade" id="firstEvent" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Came Here to Live:</h4>
+				<button type="button" class="close" data-dismiss="modal" arialabel="Close">
+					<span aria-hidden="true"><i class="fa fa-times"></i></span>
+				</button>
+				
+			</div>
+			<div class="modal-body">
+				<h5>Resilience and Resistance in the Containment Zone</h5>
+				<img src="http://counterpulse.org/wp-content/uploads/2019/06/48057883418_d8e67495d7_o.png" width="725" height="auto" />
+				<p> Came Here to Live offers a vision of what is possible when we build new models for an inclusive and just society, embrace our intrinsic interdependence, and see our futures as interconnected.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="window.location.href = 'https://abdproductions.us14.list-manage.com/track/click?u=7236fd78e87c77b23342edecd&id=38b8a0ef9b&e=d9d32ec828'">Purchase tickets</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+	<script>
+ $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fa fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fa fa-times'></i>");
+        }
+    });
+});
+</script>
+<!-- InstanceEnd --></html>

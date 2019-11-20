@@ -30,7 +30,7 @@
 
 
 <link
-  href="node_modules/custom/css/hnav.css"
+  href="node_modules/custom/css/flexnav.css"
   rel="stylesheet"
   type="text/css">
 
@@ -117,58 +117,42 @@ if ('querySelector' in document &&
 }</script>
 	</head>
 	<body>
-<nav id="navi" class="navbar navbar-expand-lg navbar-light navbar-text bg-light">
-  <div class="container-fluid"><a
-    class="navbar-brand mr-auto"
-    href="http://www.abdproductions.org">
-    ABD Productions
-  </a>
+		<div class="topnav">
+<ul id="navlist"
+  class="flexnav  medrow" role="navigation" >
+  <li class="logo"><a href="index.html">ABD Productions</a></li>
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    id="navbarSupportedContent1"
-    class="collapse navbar-collapse">
-    <ul
-      id="navlist"
-      class="navbar-nav ml-auto">
-      <li class="nav-item">
+ <!--<li class="flexspace">&nbsp;</li>-->
+ <li class="toggle"><a href="#"><i class="fa fa-bars"></i></a></li>
+      <li class="item">
         <a
           class="nav-link "
           href="./skywatchers.html">
           SKYWATCHERS
         </a>
       </li>
-      <li class="nav-item ">
+      <li class="item ">
         <a
           class="nav-link"
           href="./Andares.html">
           ANDARES
         </a>
       </li>
-      <li class="nav-item">
+      <li class="item">
         <a
           class="nav-link"
           href="./about.html">
           ABOUT
         </a>
       </li>
-      <li class="nav-item">
+      <li class="item current">
         <a
           class="nav-link"
           href="./contact.html">
           CONTACT
         </a>
       </li>
-      <li class="nav-item donate">
+      <li class="item donate">
         <a
           class="nav-link donate-a"
           href="./donate.html">
@@ -176,14 +160,11 @@ if ('querySelector' in document &&
         </a>
       </li>
     </ul>
-  </div>
-</div>
-
-		</nav>
-		<nav class="navbar nav" id="sublist">
-  <div class="mcontainer mr-auto ml-auto">
-
-    <ul
+  
+		
+		
+     <ul
+		id="sublist"	 
       class="nav-tabs navbar-nav mr-auto"
       role="tablist">
       <li class="nav-item">
@@ -199,11 +180,40 @@ if ('querySelector' in document &&
 
     </ul>
   </div>
-		</nav>
-<div class="container container-bg ml-auto mr-auto">
+	
+<div class="container container-bg container-main ml-auto mr-auto">
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+    <a href="#firstEvent" class="nav-link" data-toggle="modal" data-backdrop="true">
+Came Here to Live<p class="blabel"> Resilience and Resistance in the Containment Zone</p>
+	  <span class="blabel" style="color:#ddd;font-size:1rem;">Fri-Sun, Nov 22-24. Fri-Sat, 7:30pm, Sun 2pm matinee</span>
+</a> 
+      <div class="rpanelh"> Receive our Newsletter: </div>
+<form>
+    <div class="form-group">
+        <!--label for="">First Name</label-->
+        <input type="text" class="form-control" placeholder="Enter First Name">
+    </div>
+    <div class="form-group">
+        <!--label for="">Last Name</label-->
+        <input type="text" class="form-control" placeholder="Enter Last Name">
+    </div>
+    <div class="form-group">
+        <!--label for="">Email Address</label-->
+        <input type="text" class="form-control" required="required" placeholder="Enter Email Address">
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Subscribe</button>
+</form>
+<div class="rpanelh">Contact Information:</div>
+<p class="CR">3574 22nd St.		</p>
+			<p>San Francisco, CA 94114 </p>
+			<p>&nbsp;</p>
+			<p><iframe style="border: 0; width:19rem" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3154.490959229312!2d-122.42723470000001!3d37.7550848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e142c015147%3A0x34bd30e0afb12fbf!2s3574+22nd+St%2C+San+Francisco%2C+CA+94114!5e0!3m2!1sen!2sus!4v1430946145196" width="225" height="450" frameborder="0"></iframe></p>
+
+  </div>	
   <div
     id="tabContent"
-    class="tab-content col-md-9 col-sm-12 ">
+    class="tab-content">
     <div
       id="home"
       class="tab-pane fade show active">
@@ -262,32 +272,7 @@ if ('querySelector' in document &&
 
 
 
-  <div class="rpanel">
-    <div class="rpanelh">Join us for:</div>
-    <ul><li>A great show on Oct 31st</li><li>Another great show on Dec 31st</li></ul>   
-      <div class="rpanelh"> Receive our Newsletter: </div>
-<form>
-    <div class="form-group">
-        <!--label for="">First Name</label-->
-        <input type="text" class="form-control" placeholder="Enter First Name">
-    </div>
-    <div class="form-group">
-        <!--label for="">Last Name</label-->
-        <input type="text" class="form-control" placeholder="Enter Last Name">
-    </div>
-    <div class="form-group">
-        <!--label for="">Email Address</label-->
-        <input type="text" class="form-control" required="required" placeholder="Enter Email Address">
-    </div>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Subscribe</button>
-</form>
-<div class="rpanelh">Contact Information:</div>
-<p class="CR">3574 22nd St.		</p>
-			<p>San Francisco, CA 94114 </p>
-			<p>&nbsp;</p>
-			<p><iframe style="border: 0; width:19rem" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3154.490959229312!2d-122.42723470000001!3d37.7550848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e142c015147%3A0x34bd30e0afb12fbf!2s3574+22nd+St%2C+San+Francisco%2C+CA+94114!5e0!3m2!1sen!2sus!4v1430946145196" width="225" height="450" frameborder="0"></iframe></p>
 
-  </div>
 	
 		</div>
 <!--script src="./node_modules/custom/js/ideal-image-slider.js"></script-->

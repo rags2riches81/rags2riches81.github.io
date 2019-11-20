@@ -1,248 +1,187 @@
 <!DOCTYPE html>
-<html><!-- todo: get pictures from Deirdre to intersperse through skywatchers text. --><head>
+<html><!-- InstanceBegin template="/Templates/site templ.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<!-- todo: get pictures from Deirdre to intersperse
+ through skywatchers text. -->
 <meta charset="utf-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
 <title>Skywatchers | ABD Productions</title>
-
+<!-- InstanceEndEditable -->
 <link
   href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
   rel="stylesheet">
-
-
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 <link
   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   rel="stylesheet">
 <link rel="stylesheet" href="node_modules/custom/css/ideal-image-slider.css">
-<link rel="stylesheet" href="node_modules/custom/css/iis-thumb-nav.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/themes/default/default.css">
+
+<link href="node_modules/custom/css/iis-thumb-nav.css"
+  rel="stylesheet">
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/themes/default/default.css"
+  rel="stylesheet">
+
 <link
   href="node_modules/custom/css/theme.css"
   rel="stylesheet"
   type="text/css">
-
-
 <link
   href="node_modules/custom/css/custom.css"
   rel="stylesheet"
   type="text/css">
-
-
-
 <link
-  href="node_modules/custom/css/hnav.css"
+  href="node_modules/custom/css/flexnav.css"
   rel="stylesheet"
   type="text/css">
-<style>#slider {
-		max-width: 40rem;
-		margin: 50px auto;
-	}</style>
 
-<!--link
-  href="node_modules/custom/css/photo.css"
-  rel="stylesheet"
-  type="text/css"-->
-
-
-<style>
-	.fulltext p,
-.less {
-	display: none;
-}
-
-.fulltext:target p,
-.fulltext:target .less {
-	display: block;
-}
-
-.fulltext:target .more {
-	display: none;
-}
-</style>
-
-
-<!--
-  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
-  web page. We recommend that you do not modify it.
--->
-
-<script>var __adobewebfontsappname__="dreamweaver"</script>
-
-<script
-  src="http://use.edgefonts.net/baumans:n4:default;righteous:n4:default;wire-one:n4:default;bubbler-one:n4:default;nova-flat:n4:default;nova-square:n4:default;nova-round:n4:default;varela-round:n4:default;nunito:n4:default;istok-web:n4:default;droid-sans:n4:default;comfortaa:n4,n3:default.js"
-  type="text/javascript">
-</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"><!-- integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"--></script>
+<script src="node_modules/vendor/babel-polyfill-6.26.0.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
+	
 <script>
-if ('querySelector' in document &&
-	'addEventListener' in window) {
+  if ('querySelector' in document && 'addEventListener' in window) {  var toggleButtons =
+  document.querySelectorAll('.toggle-content'); var fullTextWrappers =
+  document.querySelectorAll('.fulltext'); var fullText; var toggleButtonText;
+  [].forEach.call(fullTextWrappers, function(fullTextWrapper) { // hide all full text on load
+  fullTextWrapper.setAttribute('hidden', true); });  [].forEach.call(toggleButtons,
+  function(toggleButton) { // show toggle more buttons toggleButton.removeAttribute('hidden');  //
+  add listener for each button toggleButton.addEventListener('click', function () {  fullTextWrapper
+  = this.parentElement.querySelector('.fulltext'); toggleButtonText = this.querySelector('.text');
+  // change attributes and text if full text is shown/hidden if
+  (!fullTextWrapper.hasAttribute('hidden')) { toggleButtonText.innerText = 'Show More';
+  fullTextWrapper.setAttribute('hidden', true); toggleButton.setAttribute('aria-expanded', false); }
+  else { toggleButtonText.innerText = 'Show Less'; fullTextWrapper.removeAttribute('hidden');
+  toggleButton.setAttribute('aria-expanded', true); } }); }); }
+</script>
 
-	var toggleButtons = document.querySelectorAll('.toggle-content');
-	var fullTextWrappers = document.querySelectorAll('.fulltext');
-	var fullText;
-	var toggleButtonText;
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="Panel2" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel3 - Gallery" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel2Title" type="boolean" value="true" -->
+<!-- InstanceParam name="Panel3Title" type="boolean" value="true" -->
+</head>
+<body>
 
-
-	[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
-		// hide all full text on load
-		fullTextWrapper.setAttribute('hidden', true);
-	});
-
-	[].forEach.call(toggleButtons, function(toggleButton) {
-		// show toggle more buttons
-		toggleButton.removeAttribute('hidden');
-
-		// add listener for each button
-		toggleButton.addEventListener('click', function () {
-
-			fullTextWrapper = this.parentElement.querySelector('.fulltext');
-			toggleButtonText = this.querySelector('.text');
-
-			// change attributes and text if full text is shown/hidden
-			if (!fullTextWrapper.hasAttribute('hidden')) {
-				toggleButtonText.innerText = 'Show More';
-				fullTextWrapper.setAttribute('hidden', true);
-				toggleButton.setAttribute('aria-expanded', false);
-			} else {
-				toggleButtonText.innerText = 'Show Less';
-				fullTextWrapper.removeAttribute('hidden');
-				toggleButton.setAttribute('aria-expanded', true);
-			}
-		});
-	});
-}</script>
-	</head>
-	<body>
-<nav id="navi" class="navbar navbar-expand-lg navbar-light navbar-text bg-light">
-  <div class="container-fluid"><a
-    class="navbar-brand mr-auto"
-    href="./index.html">
-    ABD Productions
-  </a>
-
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    id="navbarSupportedContent1"
-    class="collapse navbar-collapse">
-    <ul
-      id="navlist"
-      class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="./skywatchers.html">
-          SKYWATCHERS
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a
+<!--Use current selector to indicate which page is being viewed on nav bar."-->
+<div class="topnav"><!-- InstanceBeginEditable name="editNav" -->
+  <ul
+  id="navlist"
+  class="flexnav  medrow" role="navigation" >
+    <li class="logo">
+      <a href="index.html">ABD Productions</a>
+    </li>
+    <!--<li class="flexspace">&nbsp;</li>-->
+    <li class="toggle">
+      <a href="#"><i class="fa fa-bars"></i></a>
+    </li>
+    <li class="item current">
+      <a
+      class="nav-link "
+      href="skywatchers.html"> SKYWATCHERS </a>
+    </li>
+    <li class="item ">
+      <a
+      class="nav-link"
+      href="Andares.html"> ANDARES </a>
+    </li>
+    <li class="item">
+      <a
+      class="nav-link"
+      href="about.html"> ABOUT </a>
+    </li>
+    <li class="item ">
+      <a
+      class="nav-link"
+      href="contact.html"> CONTACT </a>
+    </li>
+    <li class="donate item">
+      <a
+      class="nav-link donate-a"
+      href="donate.html"> DONATE </a>
+    </li>
+    <li class="item pagenav">
+      <a
+          class="nav-link active"  href="#home" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true"> item 1 </a>
+    </li>
+    <li class="item  pagenav">
+      <a
           class="nav-link"
-          href="./Andares.html">
-          ANDARES
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="./about.html">
-          ABOUT
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="./contact.html">
-          CONTACT
-        </a>
-      </li>
-      <li class="nav-item donate">
-        <a
-          class="nav-link donate-a"
-          href="./donate.html">
-          DONATE
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+		href="#history" role="tab"  data-toggle="tab" aria-controls="history" aria-selected="false"
+		  > item 2 </a>
+    </li>
+    <li class="item pagenav">
+      <a
+  		  
+		  class="nav-link"
+          href="#gallery"
+          role="tab"  data-toggle="tab" aria-controls="gallery" aria-selected="false"> Gallery </a>
+    </li>
+  </ul>
+<!-- InstanceEndEditable -->
+  <ul
+  id="sublist"
+     class=" nav nav-tabs mr-auto ml-auto" role="tablist">
+ 
+      <li class="nav-item"><!-- InstanceBeginEditable name="Panel1Title" -->
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">  ABOUT </a>
+      <!-- InstanceEndEditable --></li>
 
-		</nav>
-		<nav class="navbar nav" id="sublist">
-<div class="mcontainer mr-auto ml-auto">
+      <li class="nav-item"><!-- InstanceBeginEditable name="EditRegion7" -->
+      <a
+          class="nav-link"
+          id="nav-history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false"> history </a>
+      <!-- InstanceEndEditable --></li>
 
-    <ul
-      class="nav-tabs navbar-nav mr-auto"
-      role="tablist">
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#home"
-          data-toggle="tab"
-          aria-controls="home"
-          aria-expanded="true">
-          Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#history"
-          data-toggle="tab"
-          aria-controls="history">
-          History
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
+      <li class="nav-item"><!-- InstanceBeginEditable name="EditRegion8" -->
+      <a id="nav-gallery-tab"
           class="nav-link"
           href="#gallery"
-          data-toggle="tab"
-          aria-controls="gallery">
-          Gallery
-        </a>
-      </li>
+          data-toggle="tab"  role="tab" aria-controls="gallery" aria-selected="false"> Gallery </a>
+      <!-- InstanceEndEditable --></li>
     </ul>
+	 </div>
+
+
+
+<div class="container container-bg container-main ml-auto mr-auto">
+  <div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+
+    <!--ul>
+      <li--><a href="#firstEvent" class="nav-link" data-toggle="modal" data-backdrop="true">
+Came Here to Live<p class="blabel"> Resilience and Resistance in the Containment Zone</p>
+	  <span class="blabel" style="color:#ddd;font-size:1rem;">Fri-Sun, Nov 22-24. Fri-Sat, 7:30pm, Sun 2pm matinee</span>
+</a><!--/li>
+    
+    </ul-->
   </div>
-		</nav>
-<div class="container ml-auto mr-auto">
+
   <div
     id="tabContent"
-    class="tab-content col-md-9 col-sm-12 ">
+    class="tab-content"><!-- InstanceBeginEditable name="Panel 1" -->
     <div
       id="home"
-      class="tab-pane fade show active">
+      class="tab-pane active fade show " role="tabpanel" aria-labelledby="home-tab">
       <div id="less-1">
-        <h3>SKYWATCHERS</h3>
-
-        <p id="HOME-CONTENT">
-          Founded in 2011, Skywatchers brings residents of San Francisco’s Tenderloin District into
+        <h3>Skywatchers</h3>
+        <p id="HOME-CONTENT"> Founded in 2011, Skywatchers brings residents of San Francisco’s Tenderloin District into
           partnership with professional artists to create multi-disciplinary, site-specific
           performance installations that amplify the rich and complex stories, life experiences, and
           talents of community members. Skywatchers is structured on the belief that relationships
           are the first site of social change. We believe that large-scale transformation begins
           with intimate, interpersonal exchange and that all stakeholders are transformed in this
-          process—artists, resident participants, as well as site staff.
-        </p>
-
+          process—artists, resident participants, as well as site staff.</p>
         <div
           id="more-1"
           class="fulltext">
-			<a class="more" href="#more-1">Show more</a>
+          <a
+            class="more"
+            href="#more-1"> Show more </a>
           <p>
             Skywatchers is committed to justice and equity as a critique of the current societal
             structures that marginalize large segments of the population. Creative expression and
@@ -251,22 +190,19 @@ if ('querySelector' in document &&
             individual and systemic levels. We believe in the power of art and collective creative
             endeavors to transform lives, embody our interconnectedness, and infuse our lives with
             agency, possibility, and increased vitality.
-          </p>
-
-          <a
+        
+            <a
             class="less"
-            href="#less-1">
-            Show Less
-          </a>
+            href="#less-1"> Show Less </a>
+          </p>
         </div>
-        	
       </div>
     </div>
-
-    <div
+  <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion4" -->
+  <div
       id="history"
-      class="tab-pane fade ">
-      <div>
+      class="tab-pane fade" role="tabpanel" aria-labelledby="nav-history-tab">
+    <div>
         <h3>History of the Skywatchers</h3>
 
         <p id="shistory1">
@@ -289,95 +225,101 @@ if ('querySelector' in document &&
           professionally trained artists has become more seamless.
         </p>
       </div>
-    </div>
- <div
-      class="tab-pane fade"
-	  id="gallery">
-	 <div id="slider">
-  <img src="img/Skywatchers/01.jpg" alt="caption 1">
-  <img src="img/Skywatchers/02.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/03.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/04.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/05.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/06.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/07.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/08.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/09.jpg" alt="caption 1">
-	 <img data-src="img/Skywatchers/10.JPG" alt="caption 1">
-  
-   
-
-
-	</div>
+  </div>
+  <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion5" -->
+  <div
+      id="gallery"
+      class="tab-pane fade"  role="tabpanel" aria-labelledby="nav-gallery-tab"
+	   12 >
+	  <h3>Skywatchers Gallery</h3>
+	  <div id="slider2">
+        <img
+          alt="caption 1"
+          src="img/Skywatchers/01.jpg"/>
+        <img
+          alt="caption 1"
+          src="img/Skywatchers/02.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/03.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/04.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/05.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/06.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/07.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/08.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/09.jpg"/>
+        <img
+          alt="caption 1"
+          data-src="img/Skywatchers/10.jpg" />
 	  </div>
-  <div class="rpanel">
-    <div class="rpanelh">Join us for:</div>
+  </div>
+  <!-- InstanceEndEditable --></div>
+</div>
 
-		    <ul><li>
-	  A great sho
-w on Oct 31st</li><li>Another great show on Dec 31st</li></ul>
-            <!--div>
-              <ul >
-                <li>
-                  
-                  
-                  <a href="http://www.abdproductions.org/wp-content/uploads/2015/04/Skywatchers1.pdf">
-                    Making Art, Building Community in the Tenderloin
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="http://www.epicenter-sf.org/5-27-5th-annual-skywatchers-festival-home-is-where-the-body-is/">
-                    5th Annual Skywatchers Festival: Home Is Where the Body Is
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="http://hoodline.com/2016/02/using-dance-performance-skywatchers-illuminates-lives-of-tl-residents?utm_source=individual-stories&utm_medium=email&utm_campaign=stories">
-                    Using Dance & Performance, Skywatchers Illuminates Lives of TL Residents
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="https://www.dickermanprints.com/blog/deirdre-visser-skywatchers-tenderloin-project?utm_source=Dickerman+Prints+List&utm_campaign=5a494b5928-dierdre-visser-email&utm_medium=email&utm_term=0_b698caf600-5a494b5928-69939101">
-                    The         Power of Self-Representation
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="https://www.sfexaminer.com/news/vigil-honors-those-who-died-on-the-citys-streets/">
-                    SF Examiner: Vigil honors those who died on The City's   Streets (2018)
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="https://dancersgroup.org/2019/04/setting-skywatchers-at-the-table-connection-empowerment-and-art-at-the-margins/">
-                    Skywatchers' "At the Table": Connection,         Empowerment, and Art at the Margins
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="https://hoodline.com/2019/03/life-in-an-sro-tenderloin-residents-open-their-home-to-neighbors-for-performance-art-piece">
-                    Life         in an SRO: Tenderloin residents open their home to neighbors for
-                    performance art piece
-                  </a>
-                </li>
-              </ul>
-            </div-->  </div>
-	</div></div>
-	<script src="js/ideal-image-slider.js"></script>
-<script src="js/iis-captions.js"></script>	
-<script src="js/iis-bullets.js"></script>
-<script src="js/iis-thumb-nav.js"></script>
+<script src="./js/ideal-image-slider.js"></script>
+<script src="./js/iis-captions.js"></script>
+<script src="./js/iis-bullets.js"></script>
+<script src="./js/iis-thumb-nav.js"></script>
 
 <script>
-var slider = new IdealImageSlider.Slider('#slider');
-	slider.addCaptions();
-	slider.addThumbNav();
-	slider.start();
+  var slider = new IdealImageSlider.Slider('#slider2');   slider.addCaptions();
+  slider.addThumbNav();   slider.start();
 </script>
-	</body>
-		</html>
-		<!--scrCelebrating the SKYWATCHERS</h3>
 
-<div id
+<script>
+  jQuery(document).ready(function ($) {             let selectedTab = window.location.hash;
+  $('.nav-link[href="' + selectedTab + '"]' ).trigger('click');         })
+</script>
+	<div class="modal fade" id="firstEvent" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Came Here to Live:</h4>
+				<button type="button" class="close" data-dismiss="modal" arialabel="Close">
+					<span aria-hidden="true"><i class="fa fa-times"></i></span>
+				</button>
+				
+			</div>
+				<div class="modal-body"><div class="container">
+				<h5>Resilience and Resistance in the Containment Zone</h5><br>
+				<img src="http://counterpulse.org/wp-content/uploads/2019/06/48057883418_d8e67495d7_o.png" width="725" height="auto" />
+				<h5>Fri-Sun, Nov 22-24. Fri-Sat, 7:30pm, Sun 2pm matinee </h5>
+				<p style="width:40rem;">Came Here to Live offers a vision of what is possible when we build new  models for an inclusive and just society, embrace our intrinsic interdependence, and see our futures as interconnected.</p>
+			</div>
+			</div>
+			<div class="modal-footer">
+				<div class="container">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="window.location.href = 'https://abdproductions.us14.list-manage.com/track/click?u=7236fd78e87c77b23342edecd&id=38b8a0ef9b&e=d9d32ec828'">Purchase tickets</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+	<script>
+ $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fa fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fa fa-times'></i>");
+        }
+    });
+});
+</script>
+<!-- InstanceEnd --></html>

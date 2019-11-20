@@ -14,7 +14,6 @@
   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   rel="stylesheet">
 
-  <!--link rel="stylesheet" href="node_modules/custom/css/ideal-image-slider.css"-->
 
 <link
   href="node_modules/custom/css/theme.css"
@@ -30,7 +29,7 @@
 
 
 <link
-  href="node_modules/custom/css/hnav.css"
+  href="node_modules/custom/css/flexnav.css"
   rel="stylesheet"
   type="text/css">
 	  
@@ -44,13 +43,7 @@
 		margin: 50px auto;
 	}</style>
 
-<!--link
 
-
-<!--link
-  href="node_modules/custom/css/photo.css"
-  rel="stylesheet"
-  type="text/css"-->
 
 
 <style>
@@ -70,10 +63,6 @@
 </style>
 
 
-<!--
-  The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the
-  web page. We recommend that you do not modify it.
--->
 
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 
@@ -129,73 +118,86 @@ if ('querySelector' in document &&
 }</script>
 	</head>
 	<body>
-<nav id="navi" class="navbar navbar-expand-lg navbar-light navbar-text bg-light">
-  <div class="container-fluid"><a
-    class="navbar-brand mr-auto"
-    href="./index.html">
-    ABD Productions
-  </a>
+<div class="topnav">
+<ul
+  id="navlist"
+  class="flexnav  medrow" role="navigation" >
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    id="navbarSupportedContent1"
-    class="collapse navbar-collapse">
+<li class="logo"><a href="index.html">ABD Productions</a></li>
+
+ <li class="toggle"><a href="#"><i class="fa fa-bars"></i></a></li>
+  <li class="item">
+    <a
+      class="nav-link "
+      href="skywatchers.html">
+      SKYWATCHERS
+    </a>
+  </li>
+
+  <li class="item current">
+    <a
+      class="nav-link"
+      href="Andares.html">
+      ANDARES
+    </a>
+  </li>
+
+
+  <li class="item ">
+    <a
+      class="nav-link"
+      href="about.html">
+      ABOUT
+    </a>
+  </li>
+
+  <li class="item ">
+    <a
+      class="nav-link"
+      href="contact.html">
+      CONTACT
+    </a>
+  </li>
+
+  <li class="donate item">
+    <a
+      class="nav-link donate-a"
+      href="donate.html">
+      DONATE
+    </a>
+  </li>
+	<li class="item pagenav">
+        <a
+          class="nav-link"
+          href="#home"
+          data-toggle="tab"
+          aria-controls="home"
+          aria-expanded="true">
+          Home
+        </a>
+      </li>
+      <li class="item pagenav">
+        <a
+          class="nav-link"
+          href="#history"
+          data-toggle="tab"
+          aria-controls="history">
+          History
+        </a>
+      </li>
+      <li class="item  pagenav">
+        <a
+          class="nav-link"
+          href="#gallery"
+          data-toggle="tab"
+          aria-controls="gallery">
+          Gallery
+        </a>
+      </li>
+ 
+	</ul>
     <ul
-      id="navlist"
-      class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="./skywatchers.html">
-          SKYWATCHERS
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a
-          class="nav-link"
-          href="./Andares.html">
-          ANDARES
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="./about.html">
-          ABOUT
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="./contact.html">
-          CONTACT
-        </a>
-      </li>
-      <li class="nav-item donate">
-        <a
-          class="nav-link donate-a"
-          href="./donate.html">
-          DONATE
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-		</nav>
-		<nav class="navbar nav" id="sublist">
-  <div class="mcontainer mr-auto ml-auto">
-
-    <ul
+		id="sublist"
       class="nav-tabs navbar-nav mr-auto"
       role="tablist">
       <li class="nav-item">
@@ -228,11 +230,22 @@ if ('querySelector' in document &&
       </li>
     </ul>
   </div>
-		</nav>
-<div class="container container-bg ml-auto mr-auto">
+		
+<div class="container container-bg container-main ml-auto mr-auto">
+	<div class="rpanel">
+    <div class="rpanelh">Join us for:</div>
+
+    <!--ul>
+      <li--><a href="#firstEvent" class="nav-link" data-toggle="modal" data-backdrop="true">
+Came Here to Live<p class="blabel"> Resilience and Resistance in the Containment Zone</p>
+	  <span class="blabel" style="color:#ddd;font-size:1rem;">Fri-Sun, Nov 22-24. Fri-Sat, 7:30pm, Sun 2pm matinee</span>
+</a><!--/li>
+    
+    </ul-->
+  </div>
   <div
     id="tabContent"
-    class="tab-content col-md-9 col-sm-12 ">
+    class="tab-content ">
     <div
       id="home"
       class="tab-pane fade show active">
@@ -312,10 +325,7 @@ ANDARES emerged in 2014 from an investigation into forgiveness, the personal, bo
 
 
 	</div>
-  <div class="rpanel">
-    <div class="rpanelh">Join us for:</div>
-    <ul><li>A great show on Oct 31st</li><li>Another great show on Dec 31st</li></ul>   
-  </div>
+
 </div>
 		<script src="js/iis-captions.js"></script>	
 <script src="js/iis-bullets.js"></script>
